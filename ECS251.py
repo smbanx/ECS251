@@ -1,3 +1,8 @@
+import os
+
+# set visible GPUs
+os.environ["CUDA_VISIBLE_DEVICES"] = "5"
+
 import torch
 import numpy as np
 from datasets import load_dataset
