@@ -1,4 +1,4 @@
 strace -o strace_output.txt -f python ECS251.py
-py-spy record --output profile.svg -- python ECS251.py
+py-spy record --output py_spy_profile.svg -- python ECS251.py
 strace -c -o strace_summary.txt python ECS251.py
 
