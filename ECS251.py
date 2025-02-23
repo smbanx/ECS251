@@ -115,6 +115,7 @@ if args.profile:
             if step >= 5:  # Stop profiling after a few steps
                 break
         trainer.train()
+    profiler.export_chrome_trace("./logs/profiler/pytorch_trace.json")
 else:
     print("Running training without profiler...")
     trainer.train()
