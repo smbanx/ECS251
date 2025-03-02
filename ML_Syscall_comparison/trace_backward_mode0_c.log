@@ -1,0 +1,200 @@
+<... clone3 resumed> => {parent_tid=[21557]}, 88) = 21557
+<... clone3 resumed> => {parent_tid=[21558]}, 88) = 21558
+<... clone3 resumed> => {parent_tid=[21559]}, 88) = 21559
+<... clone3 resumed> => {parent_tid=[21560]}, 88) = 21560
+<... clone3 resumed> => {parent_tid=[21561]}, 88) = 21561
+<... clone3 resumed> => {parent_tid=[21562]}, 88) = 21562
+<... clone3 resumed> => {parent_tid=[21563]}, 88) = 21563
+<... clone3 resumed> => {parent_tid=[21564]}, 88) = 21564
+<... clone3 resumed> => {parent_tid=[21565]}, 88) = 21565
+<... clone3 resumed> => {parent_tid=[21566]}, 88) = 21566
+<... clone3 resumed> => {parent_tid=[21567]}, 88) = 21567
+<... clone3 resumed> => {parent_tid=[21568]}, 88) = 21568
+<... clone3 resumed> => {parent_tid=[21569]}, 88) = 21569
+<... clone3 resumed> => {parent_tid=[21571]}, 88) = 21571
+<... clone3 resumed> => {parent_tid=[21572]}, 88) = 21572
+<... clone3 resumed> => {parent_tid=[21573]}, 88) = 21573
+<... clone3 resumed> => {parent_tid=[21574]}, 88) = 21574
+<... clone3 resumed> => {parent_tid=[21575]}, 88) = 21575
+<... clone3 resumed> => {parent_tid=[21576]}, 88) = 21576
+<... clone3 resumed> => {parent_tid=[21577]}, 88) = 21577
+<... clone3 resumed> => {parent_tid=[21578]}, 88) = 21578
+<... clone3 resumed> => {parent_tid=[21579]}, 88) = 21579
+<... clone3 resumed> => {parent_tid=[21580]}, 88) = 21580
+<... clone3 resumed> => {parent_tid=[21581]}, 88) = 21581
+<... clone3 resumed> => {parent_tid=[21582]}, 88) = 21582
+<... clone3 resumed> => {parent_tid=[21584]}, 88) = 21584
+<... clone3 resumed> => {parent_tid=[21585]}, 88) = 21585
+<... clone3 resumed> => {parent_tid=[21586]}, 88) = 21586
+<... fstat resumed>{st_mode=S_IFREG|0644, st_size=976, ...}) = 0
+<... lseek resumed>)              = 0
+<... read resumed>"", 1)          = 0
+<... stat resumed>{st_mode=S_IFREG|0644, st_size=1063, ...}) = 0
+<... stat resumed>{st_mode=S_IFREG|0644, st_size=16113, ...}) = 0
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=, parent_tid=, exit_signal=0, stack=, stack_size=, tls=} => {parent_tid=[21556]}, 88) = 21556
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=, parent_tid=, exit_signal=0, stack=, stack_size=, tls=} => {parent_tid=[21570]}, 88) = 21570
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=, parent_tid=, exit_signal=0, stack=, stack_size=, tls=} => {parent_tid=[21583]}, 88) = 21583
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=, parent_tid=, exit_signal=0, stack=, stack_size=, tls=} => {parent_tid=[21587]}, 88) = 21587
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=, parent_tid=, exit_signal=0, stack=, stack_size=, tls=} => {parent_tid=[21588]}, 88) = 21588
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=, parent_tid=, exit_signal=0, stack=, stack_size=, tls=} => {parent_tid=[21589]}, 88) = 21589
+execve("/home/hozgu/anaconda3/envs/os/bin/python", ["python", "trace_syscalls.py", "--trace_backward", "--mode", "0"],  /* 40 vars */) = 0
+fstat(3,  <unfinished ...>
+fstat(9, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+futex(, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, {tv_sec=1740946990, tv_nsec=812871000}, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+futex(, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, {tv_sec=1740946990, tv_nsec=883353000}, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+futex(, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, {tv_sec=1740946990, tv_nsec=909261000}, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+futex(, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 21588, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+getpid()                          = 21555
+getrandom("\x1f\x46\x9b\x9d\xc7\x5e\x0f\x43\x70\xe5\x72\x1b\x3f\x90\x2a\xd1\x00\x8d\xce\x03\xb6\x8c\x1d\x33", 24, GRND_NONBLOCK) = 24
+getrandom("\x25\x0b\x3f\x72\x5c\x98\x45\x3d\x31\x22\x7c\x97\x0b\x9c\x9e\x83\x71\x0e\xef\x55\xfc\x19\x8f\xb9\x7c\xbb\x23\xd0\x0b\x94\x92\x00"..., 2496, GRND_NONBLOCK) = 2496
+getrandom("\x7e\x34\xa3\x4a\xf4\x27\x8a\x9d\x7f\x61\xfa\x64\x73\x29\x6b\x6f\xa6\x49\x16\x6e\xe6\x1a\xbd\x0c\x17\x3b\x55\xa7\xe5\xb0\x2b\x1a"..., 2496, GRND_NONBLOCK) = 2496
+getrandom("\x94\x2d\x6d\xa3\xea\xb7\xca\x94", 8, GRND_NONBLOCK) = 8
+getrandom("\xf6\x2a\xab\xc1\xcf\xc7\x5a\x4a\x82\xa6\x7d\xf3\xb4\xb1\x5e\xef\xf4\x40\xaa\x55\xb0\x2a\xcf\xbf\xaa\x63\xb8\xca\x54\xf2\x89\xa5", 32, 0) = 32
+gettid()                          = 21555
+gettid()                          = 21587
+gettid()                          = 21588
+gettid()                          = 21589
+lseek(3, 0, SEEK_CUR <unfinished ...>
+mmap(NULL, 134217728, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) =
+munmap(, 1323568)   = 0
+munmap(, 1847296)   = 0
+munmap(, 2037160)   = 0
+munmap(, 2097152)   = 0
+munmap(, 246032)    = 0
+munmap(, 4190208)   = 0
+munmap(, 57344)     = 0
+munmap(, 62918656)  = 0
+munmap(, 65011712 <unfinished ...>
+munmap(, 770048)    = 0
+openat(AT_FDCWD, "/dev/shm/cuda_injection_path_shm", O_RDWR|O_NOFOLLOW|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/home/hozgu/anaconda3/envs/os/lib/python3.12/__pycache__/pickle.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/home/hozgu/anaconda3/envs/os/lib/python3.12/site-packages/numpy/__pycache__/exceptions.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3
+openat(AT_FDCWD, "/home/hozgu/anaconda3/envs/os/lib/python3.12/site-packages/numpy/_core/__pycache__/_methods.cpython-312.pyc", O_RDONLY|O_CLOEXEC <unfinished ...>
+openat(AT_FDCWD, "/proc/self/task/21587/comm", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 9
+openat(AT_FDCWD, "/proc/self/task/21589/comm", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 13
+openat(AT_FDCWD, "/tmp/853ua0rv", O_RDWR|O_CREAT|O_EXCL|O_NOFOLLOW|O_CLOEXEC, 0600) = 3
+pipe2([5, 6], O_CLOEXEC)          = 0
+pipe2([7, 8], O_CLOEXEC)          = 0
+poll([{fd=10, events=POLLIN}, {fd=11, events=POLLIN}, {fd=12, events=POLLIN}, {fd=13, events=POLLIN}], 4, 25 <unfinished ...>
+poll([{fd=10, events=POLLIN}, {fd=11, events=POLLIN}, {fd=12, events=POLLIN}], 3, 52 <unfinished ...>
+poll([{fd=10, events=POLLIN}, {fd=11, events=POLLIN}], 2, 22 <unfinished ...>
+read(10, "                     /home/hozgu"..., 1024) = 1024
+read(10, "        /usr/lib/x86_64-linux-gn"..., 1024) = 536
+read(10, "     /home/hozgu/anaconda3/envs/"..., 1024) = 1024
+read(10, "--p 0000a000 08:20 455193       "..., 1024) = 1024
+read(10, "-linux-gnu.so\n7f30c0a6b000-7f30c"..., 1024) = 1024
+read(10, "-x86_64-linux-gnu.so\n7f30c164b00"..., 1024) = 1024
+read(10, ".1.2.13\n7f30c13c5000-7f30c13d700"..., 1024) = 1024
+read(10, ".12/lib-dynload/_struct.cpython-"..., 1024) = 1024
+read(10, "/anaconda3/envs/os/lib/python3.1"..., 1024) = 1024
+read(10, "/cudnn/lib/libcudnn.so.9\n7f306f6"..., 1024) = 1024
+read(10, "/hozgu/anaconda3/envs/os/lib/pyt"..., 1024) = 1024
+read(10, "/lib-dynload/_blake2.cpython-312"..., 1024) = 1024
+read(10, "0 222227                     /ho"..., 1024) = 1024
+read(10, "00 rw-p 00000000 00:00 0 \n7f2fcc"..., 1024) = 1024
+read(10, "03677000 08:20 479853           "..., 1024) = 1024
+read(10, "0c0af9000 r-xp 00003000 08:20 45"..., 1024) = 1024
+read(10, "14                     /home/hoz"..., 1024) = 1024
+read(10, "2/lib-dynload/_queue.cpython-312"..., 1024) = 1024
+read(10, "2/lib-dynload/select.cpython-312"..., 1024) = 1024
+read(10, "2\n7f30c1d5d000-7f30c1d5e000 r--p"..., 1024) = 1024
+read(10, "3058                     /home/h"..., 1024) = 1024
+read(10, "4204143           /usr/lib/wsl/l"..., 1024) = 1024
+read(10, "5201                     /home/h"..., 1024) = 1024
+read(10, "5df6000 ---p 00000000 00:00 0 \n7"..., 1024) = 1024
+read(10, "6_64-linux-gnu/libutil.so.1\n7f30"..., 1024) = 1024
+read(10, "750000 r-xp 000bb000 08:20 47991"..., 1024) = 1024
+read(10, "7f2ffd600000 rw-p 00000000 00:00"..., 1024) = 1024
+read(10, "7f3036d28000 ---p 06728000 08:20"..., 1024) = 1024
+read(10, "7f30c178e000 r--p 00016000 08:20"..., 1024) = 1024
+read(10, "82743                     /home/"..., 1024) = 1024
+read(10, "956000 08:20 475770             "..., 1024) = 1024
+read(10, "a3/envs/os/lib/python3.12/lib-dy"..., 1024) = 1024
+read(10, "a4000 r--p 00007000 08:20 455182"..., 1024) = 1024
+read(10, "amd64_14964aa0497c7c40/libcuda.s"..., 1024) = 1024
+read(10, "b-dynload/_heapq.cpython-312-x86"..., 1024) = 1024
+read(10, "d.so.10\n7f303b7d5000-7f303cc0100"..., 1024) = 1024
+read(10, "d/_ssl.cpython-312-x86_64-linux-"..., 1024) = 1024
+read(10, "dia/nccl/lib/libnccl.so.2\n7f300e"..., 1024) = 1024
+read(10, "dynload/_bisect.cpython-312-x86_"..., 1024) = 1024
+read(10, "ges/nvidia/nvjitlink/lib/libnvJi"..., 1024) = 1024
+read(10, "id.so.1.3.0\n7f30c0ad9000-7f30c0a"..., 1024) = 1024
+read(10, "inux-gnu.so\n7f30c0e51000-7f30c0e"..., 1024) = 1024
+read(10, "inux-gnu.so\n7f30c1505000-7f30c15"..., 1024) = 1024
+read(10, "inux-gnu/libc.so.6\n7f30c1c08000-"..., 1024) = 1024
+read(10, "ite-packages/torch/lib/libgomp-2"..., 1024) = 1024
+read(10, "lib-dynload/_random.cpython-312-"..., 1024) = 1024
+read(10, "libnvidia-ml.so.1\n7f2fa0183000-7"..., 1024) = 1024
+read(10, "me/hozgu/anaconda3/envs/os/lib/p"..., 1024) = 1024
+read(10, "multiprocessing.cpython-312-x86_"..., 1024) = 1024
+read(10, "n-312-x86_64-linux-gnu.so\n7f30c0"..., 1024) = 1024
+read(10, "n3.12/lib-dynload/_datetime.cpyt"..., 1024) = 1024
+read(10, "n3.12/site-packages/nvidia/cuspa"..., 1024) = 1024
+read(10, "nux-gnu.so\n7f30c1651000-7f30c165"..., 1024) = 1024
+read(10, "on-312-x86_64-linux-gnu.so\n7f30c"..., 1024) = 1024
+read(10, "p 00276000 08:20 479961         "..., 1024) = 1024
+read(10, "py_openblas64_-ff651d7f.so\n7f2ff"..., 1024) = 1024
+read(10, "s/lib/libcrypto.so.3\n7f2fafade00"..., 1024) = 1024
+read(10, "s/lib/python3.12/lib-dynload/_co"..., 1024) = 1024
+read(10, "s/torch/lib/libtorch_python.so\n7"..., 1024) = 1024
+read(10, "thon3.12/site-packages/torch/lib"..., 1024) = 1024
+read(10, "vs/os/lib/python3.12/site-packag"..., 1024) = 1024
+read(10, "ython3.12/lib-dynload/_sha2.cpyt"..., 1024) = 1024
+read(10, "ython3.12/lib-dynload/array.cpyt"..., 1024) = 1024
+read(3, "7f30c1300000-7f30c1304000 r--p 0"..., 4208) = 3944
+read(3, "7f30c1340000-7f30c1343000 r--p 0"..., 264) = 264
+read(3, "7f30c13a1000-7f30c13a4000 r--p 0"..., 4376) = 3958
+read(3, "7f30c1504000-7f30c1505000 r--p 0"..., 418) = 418
+read(3, "7f30c19fb000-7f30c1a54000 r--p 0"..., 12702) = 3868
+read(3, "\214O|\342O\234q\313", 8) = 8
+read(3, "\313\r\r\n\0\0\0\0gp\256g\3\25\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0"..., 8540) = 8539
+read(4, "                  /home/hozgu/an"..., 1024) = 1024
+read(4, "                /home/hozgu/anac"..., 1024) = 1024
+read(4, " 0001d000 08:20 455413          "..., 1024) = 1024
+read(4, " r--p 02a77000 08:20 479659     "..., 1024) = 1024
+read(4, "-x86_64-linux-gnu.so\n7f2faeb9000"..., 1024) = 1024
+read(4, ".so.5.6.4\n7f30c136e000-7f30c138c"..., 1024) = 1024
+read(4, ".so\n7f30a2b69000-7f30a2bdc000 r-"..., 1024) = 1024
+read(4, "/lib-dynload/cmath.cpython-312-x"..., 1024) = 1024
+read(4, "/lib/libc10.so\n7f30c0be4000-7f30"..., 1024) = 1024
+read(4, "/libffi.so.8.1.2\n7f30c1764000-7f"..., 1024) = 1024
+read(4, "0 00:00 0 \n7f2fe85f6000-7f2fe85f"..., 1024) = 1024
+read(4, "0 08:20 493257                  "..., 1024) = 1024
+read(4, "0 246097                     /ho"..., 1024) = 1024
+read(4, "0 r--p 00036000 08:20 493258    "..., 1024) = 1024
+read(4, "0-7f305ffc9000 r--p 117ba000 08:"..., 1024) = 1024
+read(4, "00 0 \n7f2fccdec000-7f2fcf5ec000 "..., 1024) = 1024
+read(4, "00 0 \n7f300ea00000-7f3028269000 "..., 1024) = 1024
+read(4, "0c0a86000 r--p 00000000 08:20 45"..., 1024) = 1024
+read(4, "0c0a95000 r-xp 00002000 08:20 45"..., 1024) = 1024
+read(4, "178e000-7f30c178f000 r--p 0001c0"..., 1024) = 1024
+read(4, "20 455238                     /h"..., 1024) = 1024
+read(4, "4000 r--p 00000000 08:20 493252 "..., 1024) = 1024
+read(4, "4000 rw-p 00004000 08:20 455104 "..., 1024) = 1024
+read(4, "5f000 r--p 1337a000 08:20 493253"..., 1024) = 1024
+read(4, "86_64-linux-gnu.so\n7f30c1652000-"..., 1024) = 1024
+read(4, "\1\0\0\0\0\0\0\0", 8)    = 8
+read(4, "\n7f2fb3de1000-7f2fb3de2000 ---p "..., 1024) = 1024
+read(4, "anaconda3/envs/os/lib/libgcc_s.s"..., 1024) = 1024
+read(4, "anaconda3/envs/os/lib/python3.12"..., 1024) = 1024
+read(4, "bee000-7f3060bef000 ---p 0020200"..., 1024) = 1024
+read(4, "bf000 r--p 00000000 08:20 455455"..., 1024) = 1024
+read(4, "c10_cuda.so\n7f30c0f2a000-7f30c0f"..., 1024) = 1024
+read(4, "ch/_C.cpython-312-x86_64-linux-g"..., 1024) = 1024
+read(4, "conda3/envs/os/lib/python3.12/li"..., 1024) = 1024
+read(4, "e-packages/torch/lib/libtorch.so"..., 1024) = 1024
+read(4, "f30c13a5000 r--p 00009000 08:20 "..., 1024) = 1024
+read(4, "n-312-x86_64-linux-gnu.so\n7f30c1"..., 1024) = 1024
+read(4, "os/lib/python3.12/site-packages/"..., 1024) = 1024
+read(4, "python3.12/site-packages/torch/l"..., 1024) = 1024
+read(4, "x86_64-linux-gnu.so\n7f30c1506000"..., 1024) = 1024
+readlink("/proc/21555", , 1023) = -1 EINVAL (Invalid argument)
+readlink("/proc/21555/exe", "/home/hozgu/anaconda3/envs/os/bi"..., 1023) = 44
+readlink("/proc/self", "21555", 1023) = 5
+sched_getaffinity(21555, 8, [0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31]) = 8
+set_tid_address()   = 21555
+stat("/home/hozgu/anaconda3/envs/os/lib/python3.12/site-packages/numpy/_core/numerictypes.py",  <unfinished ...>
+stat("/home/hozgu/anaconda3/envs/os/lib/python3.12/site-packages/numpy/_core/printoptions.py",  <unfinished ...>
+sysinfo({uptime=540345, loads=[10080, 3008, 704], totalram=16611352576, freeram=8089460736, sharedram=192618496, bufferram=2523136, totalswap=4294967296, freeswap=258048, procs=478, totalhigh=0, freehigh=0, mem_unit=1}) = 0
+unlink("/tmp/853ua0rv")           = 0
+write(9, "cuda00001800007", 15)   = 15
