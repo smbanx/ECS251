@@ -148,12 +148,12 @@ execve("/usr/local/sbin/nvidia-smi", ["nvidia-smi", "--query-gpu=count,name", "-
 execve("/usr/sbin/nvidia-smi", ["nvidia-smi", "--query-gpu=count,name", "--format=csv,noheader"],  /* 44 vars */) = -1 ENOENT (No such file or directory)
 fstat(10, {st_mode=S_IFREG|0644, st_size=40, ...}) = 0
 fstat(19, {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0
-fstat(19, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
-fstat(19, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
-fstat(19, {st_mode=S_IFREG|0644, st_size=1192, ...}) = 0
-fstat(19, {st_mode=S_IFREG|0644, st_size=1307, ...}) = 0
-fstat(19, {st_mode=S_IFREG|0644, st_size=1469, ...}) = 0
-fstat(19, {st_mode=S_IFREG|0644, st_size=206, ...}) = 0
+#fstat(19, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+#fstat(19, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+#fstat(19, {st_mode=S_IFREG|0644, st_size=1192, ...}) = 0
+#fstat(19, {st_mode=S_IFREG|0644, st_size=1307, ...}) = 0
+#fstat(19, {st_mode=S_IFREG|0644, st_size=1469, ...}) = 0
+#fstat(19, {st_mode=S_IFREG|0644, st_size=206, ...}) = 0
 fstat(19, {st_mode=S_IFREG|0644, st_size=289, ...}) = 0
 fstat(19, {st_mode=S_IFREG|0644, st_size=326, ...}) = 0
 fstat(19, {st_mode=S_IFREG|0644, st_size=33290, ...}) = 0
@@ -340,11 +340,11 @@ futex(, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, {tv_sec=1740950074, t
 futex(, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 22108, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
 getcwd("/mnt/c/Users/hozgu/Desktop/ECS251/iouring_save_model", 1024) = 53
 getcwd("/mnt/c/Users/hozgu/Desktop/ECS251/iouring_save_model", 4096) = 53
-getdents64(19,  /* 11 entries */, 32768) = 336
-getdents64(19,  /* 13 entries */, 32768) = 400
-getdents64(19,  /* 351 entries */, 32768) = 14632
-getdents64(19,  /* 4 entries */, 32768) = 112
-getdents64(19,  /* 5 entries */, 32768) = 192
+#getdents64(19,  /* 11 entries */, 32768) = 336
+#getdents64(19,  /* 13 entries */, 32768) = 400
+#getdents64(19,  /* 351 entries */, 32768) = 14632
+#getdents64(19,  /* 4 entries */, 32768) = 112
+#getdents64(19,  /* 5 entries */, 32768) = 192
 getdents64(19,  /* 6 entries */, 32768) = 184
 getdents64(19,  /* 66 entries */, 32768) = 2680
 getpeername(11, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("52.217.37.62")}, [16]) = 0
@@ -449,11 +449,11 @@ gettid()                          = 22118
 gettid()                          = 22119
 gettid()                          = 22121
 gettid()                          = 22122
-io_uring_enter(19, 0, 1, IORING_ENTER_GETEVENTS, NULL, 8 <unfinished ...>
-io_uring_enter(19, 0, 1, IORING_ENTER_GETEVENTS, NULL, 8) = 0
-io_uring_enter(19, 1, 0, 0, NULL, 8) = 1
-io_uring_setup(32, {flags=0, sq_thread_cpu=0, sq_thread_idle=0, sq_entries=32, cq_entries=64, features=IORING_FEAT_SINGLE_MMAP|IORING_FEAT_NODROP|IORING_FEAT_SUBMIT_STABLE|IORING_FEAT_RW_CUR_POS|IORING_FEAT_CUR_PERSONALITY|IORING_FEAT_FAST_POLL|IORING_FEAT_POLL_32BITS|IORING_FEAT_SQPOLL_NONFIXED|IORING_FEAT_EXT_ARG|IORING_FEAT_NATIVE_WORKERS|IORING_FEAT_RSRC_TAGS, sq_off={head=0, tail=64, ring_mask=256, ring_entries=264, flags=276, dropped=272, array=1344, user_addr=0}, cq_off={head=128, tail=192, ring_mask=260, ring_entries=268, overflow=284, cqes=320, flags=280, user_addr=0}}) = 19
-io_uring_setup(32, {flags=IORING_SETUP_NO_SQARRAY, sq_thread_cpu=0, sq_thread_idle=0}) = -1 EINVAL (Invalid argument)
+#io_uring_enter(19, 0, 1, IORING_ENTER_GETEVENTS, NULL, 8 <unfinished ...>
+#io_uring_enter(19, 0, 1, IORING_ENTER_GETEVENTS, NULL, 8) = 0
+#io_uring_enter(19, 1, 0, 0, NULL, 8) = 1
+#io_uring_setup(32, {flags=0, sq_thread_cpu=0, sq_thread_idle=0, sq_entries=32, cq_entries=64, features=IORING_FEAT_SINGLE_MMAP|IORING_FEAT_NODROP|IORING_FEAT_SUBMIT_STABLE|IORING_FEAT_RW_CUR_POS|IORING_FEAT_CUR_PERSONALITY|IORING_FEAT_FAST_POLL|IORING_FEAT_POLL_32BITS|IORING_FEAT_SQPOLL_NONFIXED|IORING_FEAT_EXT_ARG|IORING_FEAT_NATIVE_WORKERS|IORING_FEAT_RSRC_TAGS, sq_off={head=0, tail=64, ring_mask=256, ring_entries=264, flags=276, dropped=272, array=1344, user_addr=0}, cq_off={head=128, tail=192, ring_mask=260, ring_entries=268, overflow=284, cqes=320, flags=280, user_addr=0}}) = 19
+#io_uring_setup(32, {flags=IORING_SETUP_NO_SQARRAY, sq_thread_cpu=0, sq_thread_idle=0}) = -1 EINVAL (Invalid argument)
 ioctl(10, TCGETS, ) = -1 ENOTTY (Inappropriate ioctl for device)
 ioctl(11, FIONREAD, [121])        = 0
 ioctl(12, FIONREAD, [112])        = 0
@@ -482,11 +482,11 @@ lstat("/tmp/tmpjoy93ogu", {st_mode=S_IFDIR|0700, st_size=4096, ...}) = 0
 lstat("/tmp/tmpjoy93ogu/_remote_module_non_scriptable.py", {st_mode=S_IFREG|0644, st_size=2355, ...}) = 0
 mkdir("/tmp/tmpjoy93ogu", 0700)   = 0
 mkdir("/tmp/tmpjoy93ogu/__pycache__", 0777) = 0
-mmap(, 12288, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 19, ) =
-mmap(, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 19, ) =
-mmap(, 139264, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 19, ) =
-mmap(, 147456, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 19, ) =
-mmap(, 151552, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 19, ) =
+#mmap(, 12288, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 19, ) =
+#mmap(, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 19, ) =
+#mmap(, 139264, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 19, ) =
+#mmap(, 147456, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 19, ) =
+#mmap(, 151552, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 19, ) =
 mmap(, 155648, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 19, ) =
 mmap(, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 19, ) =
 mmap(, 172032, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 19, ) =
@@ -1350,7 +1350,7 @@ unlink("/dev/shm/sem.loky-22019-0gbnz0gy") = 0
 unlink("/dev/shm/sem.t0ChsN")     = 0
 unlink("/home/hozgu/anaconda3/envs/os/lib/python3.12/site-packages/liburing/__pycache__/__init__.importer-312.pyc") = 0
 unlink("/tmp/_gu7a705")           = 0
-utimensat(AT_FDCWD, "/home/hozgu/.cache/huggingface/hub/datasets--imdb/.no_exist/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/dataset_infos.json", NULL, 0) = 0
+#utimensat(AT_FDCWD, "/home/hozgu/.cache/huggingface/hub/datasets--imdb/.no_exist/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/dataset_infos.json", NULL, 0) = 0
 wait4(22120,  <unfinished ...>
 write(1, "Saving the model took 1.39 secon"..., 36) = 36
 write(1, "Saving the tokenizer took 0.01 s"..., 40) = 40
