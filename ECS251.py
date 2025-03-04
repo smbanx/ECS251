@@ -115,7 +115,6 @@ if args.profile:
             if step >= 5:  # Stop profiling after a few steps
                 break
         trainer.train()
-    profiler.export_chrome_trace("./logs/profiler/pytorch_trace.json")
 else:
     print("Running training without profiler...")
     trainer.train()
@@ -129,7 +128,8 @@ print("Evaluation Results:", eval_results)
 model.save_pretrained("./bert_sentiment_model")
 tokenizer.save_pretrained("./bert_sentiment_model")
 
-print(f"Profiler logs saved in: {profiler_log_dir} (if profiling was enabled)")
+if args.profile:
+    print(f"Profiler logs saved in: {profiler_log_dir}")
 
 '''
 #Old code
