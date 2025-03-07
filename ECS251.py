@@ -2,6 +2,8 @@ import os
 
 # set visible GPUs
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+import mmap
+import ctypes
 import argparse
 import torch
 import numpy as np
@@ -10,6 +12,9 @@ from transformers import BertTokenizer, BertForSequenceClassification, Trainer, 
 from transformers import DataCollatorWithPadding
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 import torch.profiler
+
+torch.cuda.empty_cache()
+torch.cuda.memory._record_memory_history()
 
 # Argument parser
 parser = argparse.ArgumentParser()
@@ -96,6 +101,39 @@ trainer = Trainer(
 profiler_log_dir = "./logs/profiler"
 os.makedirs(profiler_log_dir, exist_ok=True)
 
+# Step 1: Implement Memory Pool to Reduce mmap Calls
+class MemoryPool:
+    def __init__(self, size=512 * 1024 * 1024):  # 512MB preallocated memory
+        self.size = size
+        self.memory = mmap.mmap(-1, self.size, prot=mmap.PROT_READ | mmap.PROT_WRITE)
+        self.offset = 0
+
+    def allocate(self, size):
+        """Allocate memory from the pool."""
+        print("custom allocation used")
+        if self.offset + size > self.size:
+            raise MemoryError("Out of memory in pool!")
+        ptr = ctypes.addressof(ctypes.c_char.from_buffer(self.memory, self.offset))
+        self.offset += size
+        return ptr
+
+    def reset(self):
+        """Reset the pool for reuse."""
+        self.offset = 0
+
+# Initialize Memory Pool
+pool = MemoryPool()
+
+# Hook PyTorch to Use Memory Pool
+def custom_alloc(size):
+    return pool.allocate(size)
+
+# Attach Memory Pool to PyTorch (Experimental)
+torch.cuda.memory._host_allocator = custom_alloc
+
+import time
+
+
 if args.profile:
     print("Running training with PyTorch Profiler...")
     with torch.profiler.profile(
@@ -118,7 +156,12 @@ if args.profile:
     profiler.export_chrome_trace("./logs/profiler/pytorch_trace.json")
 else:
     print("Running training without profiler...")
+    start_time_model = time.time()
     trainer.train()
+    end_time_model = time.time()
+    tokenizer_save_time = end_time_model - start_time_model
+    print(f"running trainer took {tokenizer_save_time:.2f} seconds.")
+
 
 
 # Evaluate the model
@@ -126,10 +169,28 @@ eval_results = trainer.evaluate()
 print("Evaluation Results:", eval_results)
 
 # Save the model
+
+
+# Measure time for saving the model
+start_time_model = time.time()
 model.save_pretrained("./bert_sentiment_model")
+end_time_model = time.time()
+model_save_time = end_time_model - start_time_model
+print(f"Saving the model took {model_save_time:.2f} seconds.")
+
+# Measure time for saving the tokenizer
+start_time_tokenizer = time.time()
 tokenizer.save_pretrained("./bert_sentiment_model")
+end_time_tokenizer = time.time()
+tokenizer_save_time = end_time_tokenizer - start_time_tokenizer
+print(f"Saving the tokenizer took {tokenizer_save_time:.2f} seconds.")
+
+
 
 print(f"Profiler logs saved in: {profiler_log_dir} (if profiling was enabled)")
+
+
+torch.cuda.memory._dump_snapshot("my_snapshot.pickle")
 
 '''
 #Old code
