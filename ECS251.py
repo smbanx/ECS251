@@ -21,7 +21,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
 # Load the dataset
-dataset = load_dataset("imdb")
+dataset = load_dataset("imdb", cache_dir="./cache")
 
 # Load the tokenizer
 tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
