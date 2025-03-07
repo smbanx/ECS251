@@ -26,7 +26,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
 # Load the dataset
-dataset = load_dataset("imdb")
+dataset = load_dataset("imdb", cache_dir="./cache")
 
 # Load the tokenizer
 tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
@@ -153,7 +153,6 @@ if args.profile:
             if step >= 5:  # Stop profiling after a few steps
                 break
         trainer.train()
-    profiler.export_chrome_trace("./logs/profiler/pytorch_trace.json")
 else:
     print("Running training without profiler...")
     start_time_model = time.time()
@@ -187,7 +186,8 @@ print(f"Saving the tokenizer took {tokenizer_save_time:.2f} seconds.")
 
 
 
-print(f"Profiler logs saved in: {profiler_log_dir} (if profiling was enabled)")
+if args.profile:
+    print(f"Profiler logs saved in: {profiler_log_dir}")
 
 
 torch.cuda.memory._dump_snapshot("my_snapshot.pickle")
