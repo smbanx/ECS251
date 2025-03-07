@@ -92,6 +92,7 @@ trainer = Trainer(
 
 trainer.train()
 eval_results = trainer.evaluate()
+print("Evaluation Results:", eval_results)
 
 # from the github sample example
 from liburing import O_CREAT, O_RDWR, AT_FDCWD, iovec, io_uring, io_uring_get_sqe, \
