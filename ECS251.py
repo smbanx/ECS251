@@ -14,7 +14,7 @@ from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 import torch.profiler
 
 torch.cuda.empty_cache()
-torch.cuda.memory._record_memory_history()
+torch.cuda.memory._record_memory_history(enabled=True)
 
 # Argument parser
 parser = argparse.ArgumentParser()
@@ -26,7 +26,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
 # Load the dataset
-dataset = load_dataset("imdb", cache_dir="./cache")
+dataset = load_dataset("imdb")
 
 # Load the tokenizer
 tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")

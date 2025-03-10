@@ -43,7 +43,7 @@ def get_cached_time():
 #     mapped_dataset = memory_map_file(dataset_path)
 
 # Load dataset
-dataset = load_dataset("imdb", cache_dir="./cache")
+dataset = load_dataset("imdb")
 
 # Load tokenizer with caching
 tokenizer = BertTokenizer.from_pretrained("bert-base-uncased", cache_dir="./cache")
