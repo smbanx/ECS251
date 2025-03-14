@@ -20,3 +20,14 @@ Our project consisted of 2 parts. The first part is profiling the workload. The 
 
 Part 2 involves in trying out ways to reduce I/O overhead within our workload. We tried to reduce I/O operations on the write model to disk part in [Code & Visualization for IO_Uring Save Model Implementation](https://github.com/smbanx/ECS251/tree/main/iouring_save_model). We also tried to reduce I/O overhead during the data loading phrase in [Code for DataLoader IO_Uring Implementation](https://github.com/smbanx/ECS251/tree/main/dataloader_io_uring). Finally we tried to optimize for commands like [clock_gettime, ioctl, etc](https://github.com/smbanx/ECS251/blob/main/workload/ECS251_optimized.py).
 
+# Profiling commands
+
+### Strace profiling commands
+strace -o strace_output.txt -f python \<INSERT FILE HERE\>
+
+py-spy record --output py_spy_profile.svg -- python \<INSERT FILE HERE\>
+
+strace -c -o strace_summary.txt python \<INSERT FILE HERE\>
+
+### Pytorch profiling commands
+python \<INSERT FILE HERE\> --profile
