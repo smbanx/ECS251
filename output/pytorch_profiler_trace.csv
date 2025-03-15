@@ -1,0 +1,820 @@
+Name,Category,Total Time (us),Average Time per Event (us),Count
+PyTorch Profiler (0),Trace,235968.191,235968.191,1
+threading.py(1032): _bootstrap,python_function,235905.571,235905.571,1
+threading.py(1075): _bootstrap_inner,python_function,235904.537,235904.537,1
+tqdm/_monitor.py(60): run,python_function,235902.782,235902.782,1
+threading.py(655): wait,python_function,235902.132,235902.132,1
+threading.py(359): wait,python_function,235900.932,235900.932,1
+ECS251.py(114): <module>,python_function,235897.368,235897.368,1
+torch/nn/modules/module.py(1743): _call_impl,python_function,194478.677,296.0101629,657
+accelerate/data_loader.py(576): __iter__,python_function,107425.508,35808.50267,3
+<built-in method to of Tensor object at 0x7fb1193e9a40>,python_function,100848.687,4202.028625,24
+accelerate/utils/operations.py(135): send_to_device,python_function,100825.812,33608.604,3
+transformers/tokenization_utils_base.py(802): to,python_function,100796.487,33598.829,3
+aten::to,cpu_op,100464.263,531.5569471,189
+aten::copy_,cpu_op,100249.957,1193.451869,84
+aten::_to_copy,cpu_op,100155.149,4173.131208,24
+cudaStreamSynchronize,cuda_runtime,99171.975,8264.33125,12
+ProfilerStep#2,user_annotation,74332.953,74332.953,1
+ProfilerStep#4,user_annotation,66860.025,66860.025,1
+ProfilerStep#3,user_annotation,60105.821,60105.821,1
+torch/_tensor.py(570): backward,python_function,58085.232,19361.744,3
+torch/autograd/__init__.py(242): backward,python_function,58060.06,19353.35333,3
+torch/autograd/graph.py(814): _engine_run_backward,python_function,57837.227,19279.07567,3
+<built-in method run_backward of torch._C._EngineBase object at 0x7fb29e8df0a0>,python_function,57815.043,19271.681,3
+"fmha_cutlassB_f32_aligned_64x64_k64_sm80(PyTorchMemEffAttention::AttentionBackwardKernel<cutlass::arch::Sm80, float, true, false, false, 64, 64, 64, false>::Params)",kernel,40817.78,887.3430435,46
+nn.Module: BertForSequenceClassification_0,python_function,34987.104,11662.368,3
+transformers/models/bert/modeling_bert.py(1636): forward,python_function,34957.874,11652.62467,3
+torch/profiler/profiler.py(811): step,python_function,34607.984,11535.99467,3
+torch/profiler/profiler.py(848): _transit_action,python_function,34301.766,11433.922,3
+torch/profiler/profiler.py(235): stop_trace,python_function,34284.064,34284.064,1
+torch/autograd/profiler.py(363): __exit__,python_function,34281.208,34281.208,1
+torch/cuda/__init__.py(975): synchronize,python_function,34276.341,34276.341,1
+<built-in function _cuda_synchronize>,python_function,34149.538,34149.538,1
+cudaDeviceSynchronize,cuda_runtime,34128.042,34128.042,1
+nn.Module: BertModel_0,python_function,33868.3,11289.43333,3
+transformers/models/bert/modeling_bert.py(1001): forward,python_function,33827.252,11275.75067,3
+void cutlass::Kernel2<cutlass_80_simt_sgemm_256x128_8x4_nn_align1>(cutlass_80_simt_sgemm_256x128_8x4_nn_align1::Params),kernel,32798.762,140.7672189,233
+nn.Module: BertEncoder_0,python_function,29849.422,9949.807333,3
+transformers/models/bert/modeling_bert.py(651): forward,python_function,29828.029,9942.676333,3
+transformers/models/bert/modeling_bert.py(573): forward,python_function,29371.589,815.8774722,36
+void cutlass::Kernel2<cutlass_80_simt_sgemm_128x256_8x4_nt_align1>(cutlass_80_simt_sgemm_128x256_8x4_nt_align1::Params),kernel,28675.726,311.6926739,92
+ampere_sgemm_128x128_tn,kernel,27640.975,383.9024306,72
+ProfilerStep#2,gpu_user_annotation,25392.539,25392.539,1
+ProfilerStep#4,gpu_user_annotation,24347.306,24347.306,1
+ProfilerStep#3,gpu_user_annotation,23335.969,23335.969,1
+autograd::engine::evaluate_function: AddmmBackward0,cpu_op,20649.84,93.0172973,222
+void cutlass::Kernel2<cutlass_80_simt_sgemm_128x64_8x5_nt_align1>(cutlass_80_simt_sgemm_128x64_8x5_nt_align1::Params),kernel,18073.048,95.12130526,190
+transformers/models/bert/modeling_bert.py(505): forward,python_function,18031.25,500.8680556,36
+ampere_sgemm_128x64_tn,kernel,15946.744,110.7412778,144
+ampere_sgemm_128x64_nn,kernel,15726.43,341.878913,46
+AddmmBackward0,cpu_op,13392.043,60.32451802,222
+cudaLaunchKernel,cuda_runtime,12918.071,6.341713795,2037
+torch/nn/modules/linear.py(124): forward,python_function,12412.914,55.91402703,222
+transformers/models/bert/modeling_bert.py(364): forward,python_function,12322.058,342.2793889,36
+<built-in function linear>,python_function,12086.037,54.44160811,222
+"fmha_cutlassF_f32_aligned_64x64_rf_sm80(PyTorchMemEffAttention::AttentionKernel<float, cutlass::arch::Sm80, true, 64, 64, 64, true, true>::Params)",kernel,11256.551,312.6819722,36
+aten::linear,cpu_op,11225.02,50.56315315,222
+transformers/pytorch_utils.py(185): apply_chunking_to_forward,python_function,11023.978,306.2216111,36
+aten::mm,cpu_op,9529.428,21.46267568,444
+transformers/models/bert/modeling_bert.py(638): feed_forward_chunk,python_function,9105.175,252.9215278,36
+autograd::engine::evaluate_function: torch::autograd::AccumulateGrad,cpu_op,8628.355,14.30904643,603
+aten::addmm,cpu_op,8354.057,37.63088739,222
+"void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, std::array<char*, 3ul> >(int, at::native::CUDAFunctor_add<float>, std::array<char*, 3ul>)",kernel,7718.695,7.450477799,1036
+torch::autograd::AccumulateGrad,cpu_op,7327.877,12.1523665,603
+aten::add_,cpu_op,7131.821,9.509094667,750
+aten::sum,cpu_op,6648.836,25.47446743,261
+<built-in function next>,python_function,6608.499,734.2776667,9
+torch/utils/data/dataloader.py(703): __next__,python_function,6559.611,2186.537,3
+autograd::engine::evaluate_function: ScaledDotProductEfficientAttentionBackward0,cpu_op,6529.75,181.3819444,36
+enumerate(DataLoader)#_SingleProcessDataLoaderIter.__next__,user_annotation,6462.521,2154.173667,3
+"void at::native::vectorized_elementwise_kernel<4, at::native::GeluBackwardCUDAKernelImpl(at::TensorIteratorBase&, at::native::GeluType)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float, float)#1}, std::array<char*, 3ul> >(int, at::native::GeluBackwardCUDAKernelImpl(at::TensorIteratorBase&, at::native::GeluType)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float, float)#1}, std::array<char*, 3ul>)",kernel,6355.126,138.154913,46
+torch/utils/data/dataloader.py(762): _next_data,python_function,6294.017,2098.005667,3
+ScaledDotProductEfficientAttentionBackward0,cpu_op,6097.228,169.3674444,36
+aten::_scaled_dot_product_efficient_attention_backward,cpu_op,5908.477,164.1243611,36
+torch/utils/data/_utils/fetch.py(47): fetch,python_function,5608.49,1869.496667,3
+transformers/models/bert/modeling_bert.py(465): forward,python_function,5282.81,146.7447222,36
+transformers/models/bert/modeling_bert.py(551): forward,python_function,5260.785,146.1329167,36
+aten::_efficient_attention_backward,cpu_op,4866.714,135.1865,36
+autograd::engine::evaluate_function: ViewBackward0,cpu_op,4367.284,7.542804836,579
+cudaMemsetAsync,cuda_runtime,4316.184,5.065943662,852
+aten::t,cpu_op,4160.851,3.748514414,1110
+transformers/models/bert/modeling_bert.py(538): forward,python_function,3478.183,96.61619444,36
+torch/nn/modules/normalization.py(216): forward,python_function,3429.87,45.7316,75
+aten::transpose,cpu_op,3389.04,2.053963636,1650
+torch/nn/functional.py(2889): layer_norm,python_function,3254.919,43.39892,75
+nn.Module: BertLayer_0,python_function,3132.67,1044.223333,3
+"void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::TensorIteratorBase&, at::native::GeluType)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::GeluCUDAKernelImpl(at::TensorIteratorBase&, at::native::GeluType)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",kernel,3098.928,86.08133333,36
+<built-in method layer_norm of type object at 0x7fb2964778e0>,python_function,3070.39,40.93853333,75
+datasets/arrow_dataset.py(2782): __getitems__,python_function,2973.665,991.2216667,3
+nn.Module: BertLayer_11,python_function,2927.159,975.7196667,3
+inspect.py(2501): _signature_from_callable,python_function,2908.048,40.38955556,72
+"void at::native::reduce_kernel<128, 4, at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4>)",kernel,2874.313,10.05004545,286
+nn.Module: BertLayer_10,python_function,2859.216,953.072,3
+aten::empty,cpu_op,2747.231,2.502031876,1098
+nn.Module: BertLayer_6,python_function,2705.328,901.776,3
+transformers/data/data_collator.py(270): __call__,python_function,2613.777,871.259,3
+transformers/data/data_collator.py(52): pad_without_fast_tokenizer_warning,python_function,2599.086,866.362,3
+aten::layer_norm,cpu_op,2594.675,34.59566667,75
+<built-in function scaled_dot_product_attention>,python_function,2566.03,71.27861111,36
+transformers/tokenization_utils_base.py(3211): pad,python_function,2548.726,849.5753333,3
+datasets/arrow_dataset.py(2778): __getitem__,python_function,2465.378,821.7926667,3
+autograd::engine::evaluate_function: NativeLayerNormBackward0,cpu_op,2464.914,32.86552,75
+datasets/arrow_dataset.py(2750): _getitem,python_function,2436.526,812.1753333,3
+nn.Module: BertLayer_4,python_function,2417.419,805.8063333,3
+aten::native_layer_norm,cpu_op,2394.904,31.93205333,75
+nn.Module: BertLayer_2,python_function,2367.279,789.093,3
+nn.Module: BertLayer_1,python_function,2366.07,788.69,3
+nn.Module: BertLayer_7,python_function,2253.309,751.103,3
+nn.Module: BertLayer_9,python_function,2240.188,746.7293333,3
+aten::scaled_dot_product_attention,cpu_op,2200.742,61.13172222,36
+nn.Module: BertLayer_3,python_function,2152.72,717.5733333,3
+nn.Module: BertLayer_8,python_function,2137.224,712.408,3
+nn.Module: BertAttention_0,python_function,2040.732,680.244,3
+nn.Module: BertAttention_11,python_function,2030.639,676.8796667,3
+aten::view,cpu_op,2002.819,1.286332049,1557
+NativeLayerNormBackward0,cpu_op,1996.951,26.62601333,75
+datasets/formatting/formatting.py(602): format_table,python_function,1959.323,653.1076667,3
+nn.Module: BertLayer_5,python_function,1936.557,645.519,3
+cuLaunchKernel,cuda_driver,1918.362,4.772044776,402
+<built-in method tensor of type object at 0x7fb2964778e0>,python_function,1837.849,102.1027222,18
+datasets/formatting/formatting.py(401): __call__,python_function,1837.643,612.5476667,3
+autograd::engine::evaluate_function: EmbeddingBackward0,cpu_op,1835.154,203.906,9
+datasets/formatting/torch_formatter.py(118): format_batch,python_function,1833.957,611.319,3
+EmbeddingBackward0,cpu_op,1794.143,199.3492222,9
+nn.Module: BertAttention_10,python_function,1793.469,597.823,3
+aten::embedding_backward,cpu_op,1778.927,197.6585556,9
+transformers/models/bert/modeling_bert.py(250): transpose_for_scores,python_function,1771.524,16.403,108
+aten::embedding_dense_backward,cpu_op,1766.946,196.3273333,9
+inspect.py(3343): signature,python_function,1736.946,48.2485,36
+nn.Module: BertAttention_6,python_function,1724.763,574.921,3
+inspect.py(3081): from_callable,python_function,1705.185,47.36625,36
+aten::native_layer_norm_backward,cpu_op,1665.88,22.21173333,75
+aten::_scaled_dot_product_efficient_attention,cpu_op,1651.923,45.88675,36
+aten::reshape,cpu_op,1651.233,1.965753571,840
+autograd::engine::evaluate_function: TBackward0,cpu_op,1639.787,7.386427928,222
+"void at::native::(anonymous namespace)::layer_norm_grad_input_kernel_vectorized<float, float>(float const*, float const*, float const*, float const*, float const*, float*, int)",kernel,1628.689,16.96551042,96
+nn.Module: BertEmbeddings_0,python_function,1520.606,506.8686667,3
+nn.Module: BertSdpaSelfAttention_0,python_function,1518.299,506.0996667,3
+transformers/utils/generic.py(256): to_py_obj,python_function,1508.801,18.62717284,81
+transformers/models/bert/modeling_bert.py(181): forward,python_function,1494.618,498.206,3
+nn.Module: BertAttention_9,python_function,1432.047,477.349,3
+transformers/tokenization_utils_base.py(221): __init__,python_function,1419.314,473.1046667,3
+ViewBackward0,cpu_op,1401.839,2.421138169,579
+transformers/tokenization_utils_base.py(699): convert_to_tensors,python_function,1390.667,463.5556667,3
+nn.Module: BertAttention_2,python_function,1388.455,462.8183333,3
+aten::add,cpu_op,1384.578,18.46104,75
+nn.Module: BertSdpaSelfAttention_10,python_function,1371.981,457.327,3
+nn.Module: BertAttention_3,python_function,1365.818,455.2726667,3
+"void at::native::(anonymous namespace)::GammaBetaBackwardCUDAKernel_32x32<float, float>(long, long, float const*, float const*, float const*, float const*, float*, float*)",kernel,1354.627,14.11069792,96
+nn.Module: BertSdpaSelfAttention_11,python_function,1344.322,448.1073333,3
+transformers/tokenization_utils_base.py(736): as_tensor,python_function,1344.288,149.3653333,9
+nn.Module: BertAttention_7,python_function,1324.048,441.3493333,3
+nn.Module: BertAttention_1,python_function,1318.277,439.4256667,3
+nn.Module: BertSdpaSelfAttention_6,python_function,1305.281,435.0936667,3
+nn.Module: BertAttention_4,python_function,1284.44,428.1466667,3
+transformers/modeling_attn_mask_utils.py(429): _prepare_4d_attention_mask_for_sdpa,python_function,1279.38,426.46,3
+nn.Module: BertAttention_8,python_function,1266.354,422.118,3
+Unrecognized,overhead,1258.708,1258.708,1
+nn.Module: BertAttention_5,python_function,1166.896,388.9653333,3
+torch/utils/data/_utils/pin_memory.py(62): pin_memory,python_function,1139.226,94.9355,12
+datasets/formatting/torch_formatter.py(103): recursive_tensorize,python_function,1114.23,371.41,3
+datasets/utils/py_utils.py(408): map_nested,python_function,1103.891,367.9636667,3
+aten::as_strided,cpu_op,1047.867,0.5114040996,2049
+TBackward0,cpu_op,1044.739,4.706031532,222
+aten::_efficient_attention_forward,cpu_op,1030.853,28.63480556,36
+<built-in method view of Tensor object at 0x7fb1181f80f0>,python_function,1002.314,8.79222807,114
+autograd::engine::evaluate_function: PermuteBackward0,cpu_op,1002.194,9.279574074,108
+nn.Module: BertSdpaSelfAttention_9,python_function,987.304,329.1013333,3
+inspect.py(2397): _signature_from_function,python_function,977.875,27.16319444,36
+nn.Module: BertSdpaSelfAttention_7,python_function,948.374,316.1246667,3
+nn.Module: BertSdpaSelfAttention_8,python_function,898.244,299.4146667,3
+nn.Module: BertSdpaSelfAttention_3,python_function,879.388,293.1293333,3
+nn.Module: BertSdpaSelfAttention_4,python_function,878.763,292.921,3
+nn.Module: BertSdpaSelfAttention_2,python_function,870.534,290.178,3
+"void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<float, float>(int, float, float const*, float const*, float const*, float*, float*, float*)",kernel,867.772,11.57029333,75
+aten::clone,cpu_op,852.641,18.94757778,45
+transformers/activations.py(77): forward,python_function,816.749,22.68747222,36
+torch/nn/modules/dropout.py(69): forward,python_function,802.483,10.28824359,78
+<built-in function gelu>,python_function,781.421,21.70613889,36
+autograd::engine::evaluate_function: GeluBackward0,cpu_op,772.098,21.44716667,36
+aten::zero_,cpu_op,738.617,13.67809259,54
+torch/nn/functional.py(1401): dropout,python_function,737.745,9.458269231,78
+transformers/modeling_attn_mask_utils.py(180): _expand_mask,python_function,729.146,243.0486667,3
+nn.Module: BertSdpaSelfAttention_1,python_function,720.503,240.1676667,3
+aten::contiguous,cpu_op,702.516,18.01323077,39
+nn.Module: BertSdpaSelfAttention_5,python_function,691.214,230.4046667,3
+aten::fill_,cpu_op,687.657,12.06415789,57
+torch/nn/modules/sparse.py(189): forward,python_function,685.873,76.20811111,9
+aten::gelu,cpu_op,685.647,19.04575,36
+datasets/formatting/formatting.py(164): extract_batch,python_function,683.283,227.761,3
+nn.Module: BertSelfOutput_11,python_function,662.329,220.7763333,3
+datasets/utils/py_utils.py(364): _single_map_nested,python_function,657.418,73.04644444,9
+PermuteBackward0,cpu_op,656.817,6.081638889,108
+torch/nn/functional.py(2437): embedding,python_function,655.385,72.82055556,9
+datasets/formatting/torch_formatter.py(89): _recursive_tensorize,python_function,647.459,71.93988889,9
+<built-in method embedding of type object at 0x7fb2964778e0>,python_function,640.057,71.11744444,9
+datasets/formatting/formatting.py(167): _arrow_array_to_numpy,python_function,626.276,69.58622222,9
+aten::embedding,cpu_op,605.692,67.29911111,9
+datasets/formatting/torch_formatter.py(49): _tensorize,python_function,598.143,66.46033333,9
+aten::permute,cpu_op,590.729,2.734856481,216
+torch/nn/modules/module.py(1915): __getattr__,python_function,580.896,0.4665831325,1245
+nn.Module: BertSelfOutput_1,python_function,573.421,191.1403333,3
+GeluBackward0,cpu_op,555.432,15.42866667,36
+nn.Module: BertOutput_4,python_function,536.514,178.838,3
+nn.Module: BertOutput_0,python_function,535.089,178.363,3
+<built-in method pin_memory of Tensor object at 0x7fb118207430>,python_function,530.518,58.94644444,9
+nn.Module: BertOutput_7,python_function,496.153,165.3843333,3
+nn.Module: BertSelfOutput_2,python_function,493.834,164.6113333,3
+Memset (Device),gpu_memset,493.392,0.4694500476,1051
+aten::gelu_backward,cpu_op,491.552,13.65422222,36
+nn.Module: BertSelfOutput_0,python_function,487.291,162.4303333,3
+nn.Module: BertOutput_11,python_function,480.822,160.274,3
+nn.Module: BertOutput_6,python_function,475.204,158.4013333,3
+<built-in method permute of Tensor object at 0x7fb1181f81e0>,python_function,470.351,4.355101852,108
+nn.Module: BertOutput_1,python_function,463.927,154.6423333,3
+torch/nn/modules/loss.py(1294): forward,python_function,459.915,153.305,3
+aten::mul,cpu_op,458.288,12.73022222,36
+nn.Module: BertSelfOutput_3,python_function,458.254,152.7513333,3
+nn.Module: BertSelfOutput_5,python_function,454.557,151.519,3
+torch/nn/functional.py(3404): cross_entropy,python_function,451.891,150.6303333,3
+"void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4>)",kernel,448.386,9.747521739,46
+transformers/utils/generic.py(262): <lambda>,python_function,442.649,6.147902778,72
+<built-in function cross_entropy_loss>,python_function,440.824,146.9413333,3
+nn.Module: BertOutput_10,python_function,439.569,146.523,3
+nn.Module: BertIntermediate_10,python_function,429.066,143.022,3
+nn.Module: BertSelfOutput_9,python_function,421.842,140.614,3
+aten::cross_entropy_loss,cpu_op,421.607,140.5356667,3
+nn.Module: BertOutput_9,python_function,408.202,136.0673333,3
+datasets/formatting/formatting.py(559): query_table,python_function,406.251,135.417,3
+nn.Module: Linear_67,python_function,405.296,135.0986667,3
+nn.Module: BertSelfOutput_10,python_function,397.01,132.3366667,3
+nn.Module: BertSelfOutput_6,python_function,396.09,132.03,3
+nn.Module: BertOutput_2,python_function,395.396,131.7986667,3
+nn.Module: Linear_36,python_function,391.195,130.3983333,3
+nn.Module: BertPooler_0,python_function,390.467,130.1556667,3
+nn.Module: BertOutput_5,python_function,384.91,128.3033333,3
+nn.Module: BertSelfOutput_4,python_function,384.527,128.1756667,3
+nn.Module: BertOutput_3,python_function,376.545,125.515,3
+"void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 3ul> >(int, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 3ul>)",kernel,375.258,8.157782609,46
+nn.Module: BertOutput_8,python_function,367.609,122.5363333,3
+nn.Module: BertIntermediate_1,python_function,367.372,122.4573333,3
+nn.Module: BertIntermediate_2,python_function,361.943,120.6476667,3
+nn.Module: BertSelfOutput_7,python_function,353.687,117.8956667,3
+aten::index_select,cpu_op,351.689,39.07655556,9
+nn.Module: BertSelfOutput_8,python_function,346.579,115.5263333,3
+nn.Module: BertIntermediate_4,python_function,346.023,115.341,3
+nn.Module: Linear_0,python_function,337.751,112.5836667,3
+transformers/models/bert/modeling_bert.py(743): forward,python_function,334.637,111.5456667,3
+"void at::native::vectorized_elementwise_kernel<4, at::native::FillFunctor<float>, std::array<char*, 1ul> >(int, at::native::FillFunctor<float>, std::array<char*, 1ul>)",kernel,333.706,13.90441667,24
+autograd::engine::evaluate_function: AddBackward0,cpu_op,330.07,4.231666667,78
+aten::pin_memory,cpu_op,320.479,35.60877778,9
+nn.Module: CrossEntropyLoss_0,python_function,320.11,320.11,1
+nn.Module: Embedding_1,python_function,318.466,106.1553333,3
+nn.Module: BertIntermediate_6,python_function,317.9,105.9666667,3
+aten::nll_loss_nd,cpu_op,316.876,105.6253333,3
+torch/autograd/profiler.py(757): __exit__,python_function,316.191,52.6985,6
+nn.Module: Linear_64,python_function,313.241,104.4136667,3
+aten::nll_loss,cpu_op,310.545,103.515,3
+<string>(2): __init__,python_function,299.947,33.32744444,9
+<built-in method dropout of type object at 0x7fb2964778e0>,python_function,297.797,3.817910256,78
+nn.Module: BertIntermediate_8,python_function,296.912,98.97066667,3
+nn.Module: Linear_29,python_function,295.498,98.49933333,3
+datasets/formatting/formatting.py(81): _query_table,python_function,292.628,97.54266667,3
+nn.Module: Linear_37,python_function,291.792,97.264,3
+<built-in function isinstance>,python_function,290.058,0.2280330189,1272
+nn.Module: Linear_66,python_function,289.755,96.585,3
+aten::empty_like,cpu_op,284.684,4.744733333,60
+nn.Module: BertIntermediate_0,python_function,282.223,94.07433333,3
+cudaMemcpyAsync,cuda_runtime,278.701,15.48338889,18
+nn.Module: LayerNorm_3,python_function,274.431,91.477,3
+"void at_cuda_detail::cub::DeviceRadixSortOnesweepKernel<at_cuda_detail::cub::DeviceRadixSortPolicy<long, at::cuda::cub::detail::OpaqueType<8>, unsigned long long>::Policy900, false, long, at::cuda::cub::detail::OpaqueType<8>, unsigned long long, int, int, at_cuda_detail::cub::detail::identity_decomposer_t>(int*, int*, unsigned long long*, unsigned long long const*, long*, long const*, at::cuda::cub::detail::OpaqueType<8>*, at::cuda::cub::detail::OpaqueType<8> const*, int, int, int, at_cuda_detail::cub::detail::identity_decomposer_t)",kernel,273.858,4.27903125,64
+<built-in method transpose of Tensor object at 0x7fb1181f83c0>,python_function,272.094,7.558166667,36
+nn.Module: Linear_24,python_function,271.175,90.39166667,3
+nn.Module: Linear_10,python_function,269.558,89.85266667,3
+nn.Module: Embedding_0,python_function,262.584,87.528,3
+nn.Module: BertIntermediate_11,python_function,260.197,86.73233333,3
+<built-in method reshape of Tensor object at 0x7fb1181f8370>,python_function,259.614,7.2115,36
+autograd::engine::evaluate_function: NllLossBackward0,cpu_op,259.612,86.53733333,3
+aten::_pin_memory,cpu_op,257.087,28.56522222,9
+nn.Module: BertIntermediate_3,python_function,257.003,85.66766667,3
+datasets/utils/tqdm.py(111): __init__,python_function,256.3,85.43333333,3
+nn.Module: Linear_43,python_function,254.147,84.71566667,3
+autograd::engine::evaluate_function: TransposeBackward0,cpu_op,252.51,7.014166667,36
+"void at::native::vectorized_elementwise_kernel<4, at::native::FillFunctor<unsigned char>, std::array<char*, 1ul> >(int, at::native::FillFunctor<unsigned char>, std::array<char*, 1ul>)",kernel,251.454,5.466391304,46
+nn.Module: BertIntermediate_7,python_function,250.414,83.47133333,3
+torch/_ops.py(946): __call__,python_function,249.858,41.643,6
+nn.Module: Linear_69,python_function,249.203,83.06766667,3
+<built-in method masked_fill of Tensor object at 0x7fb118207d40>,python_function,245.217,81.739,3
+aten::is_nonzero,cpu_op,239.514,79.838,3
+transformers/utils/generic.py(362): __post_init__,python_function,236.811,26.31233333,9
+nn.Module: Linear_40,python_function,234.188,78.06266667,3
+aten::item,cpu_op,233.64,77.88,3
+aten::masked_fill,cpu_op,232.313,77.43766667,3
+<built-in method _get_tracing_state of PyCapsule object at 0x7fb21a104240>,python_function,231.344,0.3505212121,660
+inspect.py(3029): __init__,python_function,229.726,3.190638889,72
+aten::_local_scalar_dense,cpu_op,227.489,75.82966667,3
+nn.Module: LayerNorm_14,python_function,227.114,75.70466667,3
+aten::zeros,cpu_op,224.866,14.99106667,15
+nn.Module: Linear_21,python_function,224.553,74.851,3
+nn.Module: Linear_16,python_function,223.305,74.435,3
+nn.Module: BertIntermediate_9,python_function,223.301,74.43366667,3
+<built-in function any>,python_function,223.152,8.264888889,27
+nn.Module: Linear_62,python_function,220.949,73.64966667,3
+torch/autograd/profiler.py(751): __enter__,python_function,217.823,36.30383333,6
+<built-in method tolist of Tensor object at 0x7fb118206e90>,python_function,216.404,3.005611111,72
+inspect.py(2124): _signature_bound_method,python_function,215.587,5.988527778,36
+nn.Module: Linear_48,python_function,213.795,71.265,3
+torch/profiler/profiler.py(821): step,python_function,212.015,212.015,1
+nn.Module: Linear_52,python_function,211.451,70.48366667,3
+nn.Module: Linear_47,python_function,210.981,70.327,3
+nn.Module: LayerNorm_0,python_function,210.571,70.19033333,3
+nn.Module: Linear_14,python_function,209.74,69.91333333,3
+NllLossBackward0,cpu_op,206.292,68.764,3
+<built-in method expand of Tensor object at 0x7fb1182075c0>,python_function,205.106,34.18433333,6
+nn.Module: BertIntermediate_5,python_function,205.072,68.35733333,3
+nn.Module: Linear_54,python_function,203.775,67.925,3
+nn.Module: LayerNorm_23,python_function,202.373,67.45766667,3
+nn.Module: Linear_55,python_function,202.034,67.34466667,3
+torch/_ops.py(1112): __call__,python_function,199.349,33.22483333,6
+nn.Module: Linear_28,python_function,198.779,66.25966667,3
+cudaOccupancyMaxActiveBlocksPerMultiprocessor,cuda_runtime,198.65,0.7882936508,252
+nn.Module: Linear_6,python_function,197.942,65.98066667,3
+inspect.py(2743): __init__,python_function,197.347,2.740930556,72
+datasets/table.py(112): fast_gather,python_function,195.878,65.29266667,3
+<built-in method _record_function_enter_new of PyCapsule object at 0x7fb18b91dc20>,python_function,193.137,32.1895,6
+nn.Module: Linear_2,python_function,188.732,62.91066667,3
+nn.Module: Linear_11,python_function,188.596,62.86533333,3
+nn.Module: Linear_12,python_function,188.35,62.78333333,3
+tqdm/asyncio.py(23): __init__,python_function,186.661,62.22033333,3
+nn.Module: Linear_56,python_function,186.108,62.036,3
+nn.Module: Linear_20,python_function,185.8,61.93333333,3
+aten::empty_strided,cpu_op,185.632,6.875259259,27
+nn.Module: Linear_63,python_function,185.24,61.74666667,3
+nn.Module: Linear_59,python_function,184.173,61.391,3
+torch/autograd/__init__.py(88): _make_grads,python_function,182.976,60.992,3
+aten::nll_loss_backward,cpu_op,180.73,60.24333333,3
+nn.Module: Linear_70,python_function,180.641,60.21366667,3
+nn.Module: Linear_60,python_function,179.486,59.82866667,3
+nn.Module: Linear_4,python_function,179.443,59.81433333,3
+nn.Module: Embedding_2,python_function,178.694,59.56466667,3
+nn.Module: Linear_5,python_function,178.343,59.44766667,3
+nn.Module: Linear_42,python_function,174.655,58.21833333,3
+nn.Module: LayerNorm_5,python_function,173.249,57.74966667,3
+nn.Module: Linear_72,python_function,172.301,57.43366667,3
+nn.Module: Linear_46,python_function,171.654,57.218,3
+nn.Module: Linear_44,python_function,171.341,57.11366667,3
+aten::arange,cpu_op,170.891,14.24091667,12
+nn.Module: LayerNorm_9,python_function,169.038,56.346,3
+nn.Module: LayerNorm_24,python_function,168.654,56.218,3
+nn.Module: LayerNorm_2,python_function,167.918,55.97266667,3
+nn.Module: Linear_35,python_function,166.682,55.56066667,3
+torch/_ops.py(1000): _must_dispatch_in_python,python_function,164.434,27.40566667,6
+torch/utils/_pytree.py(917): tree_iter,python_function,163.544,6.814333333,24
+nn.Module: LayerNorm_4,python_function,161.875,53.95833333,3
+nn.Module: Linear_33,python_function,160.281,53.427,3
+nn.Module: Linear_15,python_function,159.546,53.182,3
+Buffer Flush,overhead,156.415,78.2075,2
+transformers/utils/generic.py(100): _get_frameworks_and_test_func,python_function,153.868,2.051573333,75
+nn.Module: Linear_68,python_function,153.031,51.01033333,3
+torch/utils/_pytree.py(1224): tree_any,python_function,152.086,25.34766667,6
+nn.Module: Linear_3,python_function,152.063,50.68766667,3
+nn.Module: LayerNorm_18,python_function,151.669,50.55633333,3
+numpy/lib/_version.py(55): __init__,python_function,151.291,8.405055556,18
+nn.Module: Linear_57,python_function,150.787,50.26233333,3
+nn.Module: Linear_45,python_function,148.688,49.56266667,3
+tqdm/std.py(952): __init__,python_function,148.678,49.55933333,3
+torch/nn/modules/loss.py(1281): __init__,python_function,148.372,49.45733333,3
+nn.Module: Linear_49,python_function,148.356,49.452,3
+torch/_tensor.py(33): wrapped,python_function,146.52,48.84,3
+nn.Module: Linear_51,python_function,146.1,48.7,3
+nn.Module: LayerNorm_1,python_function,146.031,48.677,3
+nn.Module: LayerNorm_6,python_function,144.808,48.26933333,3
+<built-in method all of type object at 0x7fb2964778e0>,python_function,144.675,48.225,3
+<built-in method size of Tensor object at 0x7fb118204460>,python_function,143.406,0.9372941176,153
+<built-in method detach of Tensor object at 0x7fb118206300>,python_function,143.364,1.991166667,72
+nn.Module: Linear_26,python_function,143.081,47.69366667,3
+nn.Module: Linear_1,python_function,142.311,47.437,3
+nn.Module: Linear_73,python_function,141.231,47.077,3
+nn.Module: Linear_17,python_function,141.05,47.01666667,3
+nn.Module: Linear_71,python_function,140.675,46.89166667,3
+aten::select,cpu_op,139.911,1.793730769,78
+nn.Module: Linear_39,python_function,137.416,45.80533333,3
+nn.Module: LayerNorm_19,python_function,136.146,45.382,3
+torch/_tensor.py(1071): __rsub__,python_function,135.703,45.23433333,3
+nn.Module: LayerNorm_16,python_function,134.351,44.78366667,3
+nn.Module: Linear_18,python_function,134.15,44.71666667,3
+nn.Module: Linear_65,python_function,132.964,44.32133333,3
+<built-in method rsub of type object at 0x7fb2964778e0>,python_function,129.923,43.30766667,3
+nn.Module: Linear_34,python_function,129.452,43.15066667,3
+nn.Module: LayerNorm_10,python_function,128.636,42.87866667,3
+nn.Module: Linear_7,python_function,128.094,42.698,3
+nn.Module: Linear_22,python_function,128.062,42.68733333,3
+nn.Module: LayerNorm_22,python_function,126.788,42.26266667,3
+nn.Module: Linear_58,python_function,126.37,42.12333333,3
+aten::all,cpu_op,125.695,41.89833333,3
+"void at::native::(anonymous namespace)::indexSelectLargeIndex<float, long, unsigned int, 2, 2, -2, true>(at::cuda::detail::TensorInfo<float, unsigned int>, at::cuda::detail::TensorInfo<float const, unsigned int>, at::cuda::detail::TensorInfo<long const, unsigned int>, int, int, unsigned int, unsigned int, long)",kernel,123.723,13.747,9
+nn.Module: Linear_30,python_function,122.838,40.946,3
+"void at::native::(anonymous namespace)::compute_grad_weight<float, long>(long const*, float const*, long const*, long, long, long const*, long const*, at::AccumulateType<float, true>::type*, long)",kernel,122.659,15.332375,8
+nn.Module: Linear_41,python_function,121.956,40.652,3
+nn.Module: LayerNorm_20,python_function,121.545,40.515,3
+nn.Module: LayerNorm_12,python_function,121.291,40.43033333,3
+nn.Module: Linear_38,python_function,120.954,40.318,3
+aten::masked_fill_,cpu_op,119.925,39.975,3
+autograd::engine::evaluate_function: SliceBackward0,cpu_op,118.795,39.59833333,3
+TransposeBackward0,cpu_op,118.686,3.296833333,36
+torch/nn/modules/loss.py(50): __init__,python_function,117.79,39.26333333,3
+nn.Module: Linear_53,python_function,117.627,39.209,3
+nn.Module: Linear_23,python_function,116.652,38.884,3
+nn.Module: Linear_9,python_function,116.614,38.87133333,3
+aten::rsub,cpu_op,116.583,38.861,3
+nn.Module: Dropout_0,python_function,116.544,38.848,3
+nn.Module: Linear_25,python_function,115.249,38.41633333,3
+nn.Module: Linear_13,python_function,112.959,37.653,3
+nn.Module: Linear_61,python_function,112.886,37.62866667,3
+autograd::engine::evaluate_function: SelectBackward0,cpu_op,112.57,37.52333333,3
+nn.Module: Linear_50,python_function,111.843,37.281,3
+nn.Module: GELUActivation_2,python_function,111.368,37.12266667,3
+<built-in method ones_like of type object at 0x7fb2964778e0>,python_function,111.179,37.05966667,3
+SliceBackward0,cpu_op,110.843,36.94766667,3
+nn.Module: GELUActivation_3,python_function,110.257,36.75233333,3
+nn.Module: Linear_19,python_function,109.309,36.43633333,3
+nn.Module: LayerNorm_7,python_function,108.81,36.27,3
+nn.Module: Linear_31,python_function,108.435,36.145,3
+nn.Module: LayerNorm_8,python_function,108.211,36.07033333,3
+nn.Module: Linear_27,python_function,107.882,35.96066667,3
+aten::slice_backward,cpu_op,105.633,35.211,3
+nn.Module: Linear_8,python_function,105.44,35.14666667,3
+inspect.py(176): get_annotations,python_function,104.603,2.905638889,36
+SelectBackward0,cpu_op,103.823,34.60766667,3
+aten::sub,cpu_op,102.19,34.06333333,3
+aten::expand,cpu_op,102.02,2.429047619,42
+nn.Module: LayerNorm_11,python_function,101.511,33.837,3
+"void at::native::(anonymous namespace)::sum_and_scatter<float, long>(long const*, float*, long, long const*, long const*, at::AccumulateType<float, true>::type const*, long const*, long const*, long, long)",kernel,100.972,12.6215,8
+nn.Module: LayerNorm_13,python_function,100.085,33.36166667,3
+cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags,cuda_runtime,99.052,8.254333333,12
+aten::select_backward,cpu_op,98.537,32.84566667,3
+torch/profiler/profiler.py(852): _transit_action,python_function,98.042,98.042,1
+nn.Module: LayerNorm_21,python_function,97.112,32.37066667,3
+torch/profiler/profiler.py(199): start_trace,python_function,97.021,97.021,1
+nn.Module: LayerNorm_15,python_function,95.804,31.93466667,3
+nn.Module: LayerNorm_17,python_function,95.284,31.76133333,3
+aten::ones_like,cpu_op,94.43,31.47666667,3
+nn.Module: Linear_32,python_function,94.386,31.462,3
+nn.Module: CrossEntropyLoss_1,python_function,94.158,94.158,1
+cudaDeviceGetAttribute,cuda_runtime,93.034,0.2215095238,420
+nn.Module: GELUActivation_10,python_function,90.261,30.087,3
+aten::log_softmax,cpu_op,89.82,29.94,3
+numpy/lib/_version.py(151): __ge__,python_function,88.002,9.778,9
+torch/nn/modules/loss.py(41): __init__,python_function,85.978,28.65933333,3
+inspect.py(3097): replace,python_function,85.962,2.387833333,36
+nn.Module: Dropout_24,python_function,84.586,28.19533333,3
+nn.Module: CrossEntropyLoss_2,python_function,83.889,83.889,1
+numpy/lib/_version.py(114): _compare,python_function,82.911,9.212333333,9
+aten::eq,cpu_op,82.045,27.34833333,3
+nn.Module: GELUActivation_4,python_function,80.166,26.722,3
+"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1} const&)::{lambda(int)#1})",kernel,79.924,1.631102041,49
+<built-in function getattr>,python_function,78.447,0.2742902098,286
+<built-in function asarray>,python_function,78.153,8.683666667,9
+nn.Module: Tanh_0,python_function,78.051,26.017,3
+transformers/tokenization_utils_base.py(2653): _get_padding_truncation_strategies,python_function,77.955,25.985,3
+torch/_VF.py(27): __getattr__,python_function,77.91,0.9988461538,78
+aten::_log_softmax,cpu_op,77.901,25.967,3
+nn.Module: GELUActivation_9,python_function,77.808,25.936,3
+aten::nll_loss_forward,cpu_op,77.221,25.74033333,3
+nn.Module: Dropout_2,python_function,77.003,25.66766667,3
+torch/cuda/__init__.py(437): __init__,python_function,75.93,75.93,1
+nn.Module: GELUActivation_0,python_function,75.622,25.20733333,3
+<built-in method  of PyCapsule object at 0x7fb10d34f000>,python_function,75.582,12.597,6
+aten::slice,cpu_op,74.289,4.127166667,18
+torch/cuda/_utils.py(9): _get_device_index,python_function,73.071,73.071,1
+aten::detach,cpu_op,70.632,0.981,72
+tqdm/std.py(679): _get_free_pos,python_function,70.069,23.35633333,3
+autograd::engine::evaluate_function: TanhBackward0,cpu_op,68.997,22.999,3
+torch/nn/modules/activation.py(391): forward,python_function,68.912,22.97066667,3
+nn.Module: GELUActivation_1,python_function,68.299,22.76633333,3
+tqdm/std.py(663): __new__,python_function,67.644,22.548,3
+autograd::engine::evaluate_function: LogSoftmaxBackward0,cpu_op,66.534,22.178,3
+<built-in method tanh of type object at 0x7fb2964778e0>,python_function,64.327,21.44233333,3
+nn.Module: Dropout_1,python_function,63.585,21.195,3
+nn.Module: GELUActivation_8,python_function,63.515,21.17166667,3
+datasets/formatting/formatting.py(530): _check_valid_index_key,python_function,63.18,7.02,9
+nn.Module: GELUActivation_6,python_function,62.076,20.692,3
+nn.Module: Dropout_3,python_function,61.478,20.49266667,3
+nn.Module: Dropout_16,python_function,61.472,20.49066667,3
+<built-in function len>,python_function,61.144,0.2264592593,270
+aten::dropout,cpu_op,60.867,0.7803461538,78
+dataclasses.py(1278): fields,python_function,60.367,6.707444444,9
+cudaStreamIsCapturing,cuda_runtime,59.988,1.666333333,36
+transformers/tokenization_utils_base.py(1086): __getattr__,python_function,59.955,6.661666667,9
+re/__init__.py(164): match,python_function,59.858,1.330177778,45
+nn.Module: GELUActivation_7,python_function,59.75,19.91666667,3
+AddBackward0,cpu_op,59.139,0.7581923077,78
+enum.py(720): __call__,python_function,58.446,0.77928,75
+cudaFuncGetAttributes,cuda_runtime,58.427,1.622972222,36
+TanhBackward0,cpu_op,58.307,19.43566667,3
+nn.Module: GELUActivation_11,python_function,58.238,19.41266667,3
+LogSoftmaxBackward0,cpu_op,55.755,18.585,3
+torch/nn/modules/module.py(1932): __setattr__,python_function,55.655,6.183888889,9
+inspect.py(754): unwrap,python_function,54.973,1.527027778,36
+aten::tanh,cpu_op,53.979,17.993,3
+nn.Module: GELUActivation_5,python_function,53.788,17.92933333,3
+transformers/utils/generic.py(121): is_tensor,python_function,53.278,17.75933333,3
+<built-in function all>,python_function,51.646,2.151916667,24
+transformers/utils/generic.py(162): is_torch_tensor,python_function,51.612,0.6616923077,78
+<built-in function hasattr>,python_function,50.473,0.5868953488,86
+transformers/utils/import_utils.py(1661): requires_backends,python_function,49.608,16.536,3
+aten::is_pinned,cpu_op,48.94,5.437777778,9
+<built-in method cpu of Tensor object at 0x7fb118206e90>,python_function,47.728,0.6628888889,72
+torch/autograd/profiler.py(358): _start_trace,python_function,47.68,47.68,1
+aten::tanh_backward,cpu_op,47.563,15.85433333,3
+nn.Module: Dropout_13,python_function,45.755,15.25166667,3
+aten::_log_softmax_backward_data,cpu_op,45.27,15.09,3
+transformers/configuration_utils.py(208): __getattribute__,python_function,42.231,1.173083333,36
+nn.Module: Dropout_23,python_function,41.186,13.72866667,3
+torch/_utils.py(795): _get_device_index,python_function,41.113,41.113,1
+torch/utils/_pytree.py(699): _is_leaf,python_function,40.802,1.700083333,24
+typing.py(1221): __instancecheck__,python_function,39.588,3.299,12
+torch/utils/data/dataloader.py(697): _next_index,python_function,39.316,13.10533333,3
+transformers/utils/generic.py(437): __setattr__,python_function,39.3,0.8733333333,45
+transformers/modeling_utils.py(5058): warn_if_padding_and_no_attention_mask,python_function,39.129,13.043,3
+aten::resize_,cpu_op,38.233,2.124055556,18
+transformers/utils/generic.py(430): __getitem__,python_function,38.076,2.5384,15
+transformers/utils/generic.py(82): infer_framework_from_repr,python_function,37.862,0.5048266667,75
+torch/backends/__init__.py(38): __get__,python_function,37.473,0.49964,75
+torch/autograd/profiler.py(740): __init__,python_function,37.458,6.243,6
+numpy/_core/numerictypes.py(471): issubdtype,python_function,37.018,2.056555556,18
+torch/nn/modules/module.py(476): __init__,python_function,36.061,12.02033333,3
+detach,cpu_op,35.735,0.4963194444,72
+torch/_utils.py(769): _get_current_device_index,python_function,35.465,35.465,1
+Memcpy DtoD (Device -> Device),gpu_memcpy,34.963,5.827166667,6
+datasets/formatting/__init__.py(122): get_formatter,python_function,34.758,11.586,3
+"void at::native::(anonymous namespace)::embedding_backward_feature_kernel<float, float, long>(long const*, float const*, float*, int, long, int)",kernel,34.416,8.604,4
+<frozen abc>(117): __instancecheck__,python_function,34.145,0.3448989899,99
+torch/utils/data/sampler.py(346): __iter__,python_function,33.993,11.331,3
+torch/utils/_pytree.py(931): tree_iter,python_function,33.653,2.804416667,12
+<built-in method get of dict object at 0x7fb11a91e6c0>,python_function,33.26,0.2173856209,153
+torch/utils/_pytree.py(692): _get_node_type,python_function,33.203,0.790547619,42
+torch/_utils.py(753): _get_device_attr,python_function,32.87,32.87,1
+nn.Module: Dropout_21,python_function,32.08,10.69333333,3
+nn.Module: Dropout_7,python_function,31.406,10.46866667,3
+<built-in function fromiter>,python_function,31.256,10.41866667,3
+nn.Module: Dropout_10,python_function,30.909,10.303,3
+torch/cuda/__init__.py(444): __exit__,python_function,30.746,30.746,1
+nn.Module: Dropout_4,python_function,30.398,10.13266667,3
+nn.Module: Dropout_6,python_function,30.165,10.055,3
+cudaFuncSetAttribute,cuda_runtime,29.741,0.8261388889,36
+nn.Module: Dropout_25,python_function,29.297,9.765666667,3
+nn.Module: Dropout_19,python_function,29.214,9.738,3
+nn.Module: Dropout_11,python_function,28.905,9.635,3
+tqdm/utils.py(213): __init__,python_function,28.816,9.605333333,3
+nn.Module: Dropout_15,python_function,28.691,9.563666667,3
+typing.py(1492): __subclasscheck__,python_function,28.531,2.377583333,12
+nn.Module: Dropout_5,python_function,28.496,9.498666667,3
+tqdm/std.py(1147): __del__,python_function,28.298,9.432666667,3
+nn.Module: Dropout_22,python_function,28.217,9.405666667,3
+nn.Module: Dropout_9,python_function,28.193,9.397666667,3
+re/__init__.py(280): _compile,python_function,28.016,0.4446984127,63
+inspect.py(3076): <genexpr>,python_function,27.995,0.259212963,108
+torch/_tensor.py(1128): __len__,python_function,27.533,9.177666667,3
+<built-in function issubclass>,python_function,27.521,0.3988550725,69
+nn.Module: Dropout_17,python_function,26.861,8.953666667,3
+<built-in function _has_torch_function_unary>,python_function,26.068,0.3103333333,84
+nn.Module: Dropout_20,python_function,25.936,8.645333333,3
+"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<float> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<float> const&)::{lambda(int)#1})",kernel,25.402,8.467333333,3
+nn.Module: Dropout_12,python_function,25.089,8.363,3
+torch/autograd/profiler.py(1160): increment_step,python_function,24.931,8.310333333,3
+transformers/utils/generic.py(156): _is_torch,python_function,24.821,0.3182179487,78
+nn.Module: Dropout_14,python_function,24.664,8.221333333,3
+numpy/_core/fromnumeric.py(1464): searchsorted,python_function,24.621,8.207,3
+datasets/features/features.py(718): _is_zero_copy_only,python_function,24.247,2.694111111,9
+nn.Module: Dropout_18,python_function,23.849,7.949666667,3
+nn.Module: Dropout_8,python_function,23.654,7.884666667,3
+"void at_cuda_detail::cub::DeviceRadixSortHistogramKernel<at_cuda_detail::cub::DeviceRadixSortPolicy<long, at::cuda::cub::detail::OpaqueType<8>, unsigned long long>::Policy900, false, long, unsigned long long, at_cuda_detail::cub::detail::identity_decomposer_t>(unsigned long long*, long const*, unsigned long long, int, int, at_cuda_detail::cub::detail::identity_decomposer_t)",kernel,23.643,2.955375,8
+torch/utils/_pytree.py(681): _is_namedtuple_instance,python_function,23.562,0.561,42
+ampere_sgemm_32x32_sliced1x4_tn,kernel,23.415,7.805,3
+"void at::native::(anonymous namespace)::krn_partial_segment_offset<long>(long*, long const*, long const*, long const*, long const*)",kernel,23.212,2.9015,8
+<built-in function max>,python_function,23.209,2.578777778,9
+transformers/utils/generic.py(456): to_tuple,python_function,22.402,3.733666667,6
+<frozen _collections_abc>(974): update,python_function,22.286,3.714333333,6
+<built-in function _abc_instancecheck>,python_function,22.119,0.2234242424,99
+torch/_utils.py(736): _get_available_device_type,python_function,21.869,21.869,1
+datasets/formatting/formatting.py(193): <genexpr>,python_function,21.063,0.2925416667,72
+<built-in method append of list object at 0x7fb10d2d4780>,python_function,21.021,0.09468918919,222
+typing.py(392): inner,python_function,20.45,2.272222222,9
+torch/nn/modules/module.py(522): register_buffer,python_function,20.234,6.744666667,3
+<built-in method match of re.Pattern object at 0x7fb17226bde0>,python_function,20.105,0.4467777778,45
+torch/cuda/__init__.py(116): is_available,python_function,20.1,20.1,1
+<built-in function _has_torch_function_variadic>,python_function,19.881,0.2285172414,87
+tqdm/std.py(1265): close,python_function,19.862,6.620666667,3
+"void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1} const&)::{lambda(int)#1})",kernel,19.815,6.605,3
+datasets/formatting/torch_formatter.py(33): __init__,python_function,18.917,6.305666667,3
+copy.py(61): copy,python_function,18.743,6.247666667,3
+numpy/_core/fromnumeric.py(51): _wrapfunc,python_function,18.708,6.236,3
+datasets/formatting/formatting.py(192): <genexpr>,python_function,18.59,2.065555556,9
+aten::detach_,cpu_op,18.463,1.025722222,18
+Memcpy HtoD (Pinned -> Device),gpu_memcpy,18.116,2.012888889,9
+<built-in function _get_cudnn_enabled>,python_function,17.849,0.2379866667,75
+tqdm/std.py(110): __enter__,python_function,17.805,2.9675,6
+"void cublasLt::splitKreduce_kernel<32, 16, int, float, float, float, false, float, float, float, true, false, false>(cublasLt::cublasSplitKParams<float>, float const*, float const*, float*, float*, float const*, float const*, float const*, float const*, float*, void*, long, float*, int*, float*, float const*, float const*, float const*, float const*)",kernel,17.136,1.904,9
+transformers/utils/import_utils.py(779): is_torchdynamo_compiling,python_function,17.053,2.842166667,6
+"void at_cuda_detail::cub::DeviceUniqueByKeySweepKernel<at_cuda_detail::cub::DeviceUniqueByKeyPolicy<long const*, thrust::THRUST_200500_500_600_700_750_800_860_900_NS::counting_iterator<int, thrust::THRUST_200500_500_600_700_750_800_860_900_NS::use_default, thrust::THRUST_200500_500_600_700_750_800_860_900_NS::use_default, thrust::THRUST_200500_500_600_700_750_800_860_900_NS::use_default> >::Policy900, long const*, thrust::THRUST_200500_500_600_700_750_800_860_900_NS::counting_iterator<int, thrust::THRUST_200500_500_600_700_750_800_860_900_NS::use_default, thrust::THRUST_200500_500_600_700_750_800_860_900_NS::use_default, thrust::THRUST_200500_500_600_700_750_800_860_900_NS::use_default>, long*, long*, long*, at_cuda_detail::cub::ScanTileState<unsigned long long, true>, cuda::std::__4::equal_to<void>, unsigned long long>(long const*, thrust::THRUST_200500_500_600_700_750_800_860_900_NS::counting_iterator<int, thrust::THRUST_200500_500_600_700_750_800_860_900_NS::use_default, thrust::THRUST_200500_500_600_700_750_800_860_900_NS::use_default, thrust::THRUST_200500_500_600_700_750_800_860_900_NS::use_default>, long*, long*, long*, at_cuda_detail::cub::ScanTileState<unsigned long long, true>, cuda::std::__4::equal_to<void>, unsigned long long, int, at_cuda_detail::cub::detail::vsmem_t)",kernel,16.559,2.069875,8
+re/__init__.py(174): search,python_function,16.393,0.9107222222,18
+"void gemmSN_TN_kernel<float, 128, 16, 2, 4, 8, 9, false, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float> >(cublasGemmSmallNParams<cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float>, float>)",kernel,16.243,5.414333333,3
+collections/__init__.py(1120): __init__,python_function,16.134,5.378,3
+numpy/_core/numerictypes.py(289): issubclass_,python_function,15.562,0.4322777778,36
+<built-in method isidentifier of str object at 0x95e8e0>,python_function,15.322,0.2128055556,72
+torch/cuda/__init__.py(112): _nvml_based_avail,python_function,15.265,15.265,1
+"void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#11}::operator()() const::{lambda(bool)#1}, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#11}::operator()() const::{lambda(bool)#1}, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",kernel,15.148,5.049333333,3
+"void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::masked_fill_kernel(at::TensorIterator&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(float, bool)#1}, std::array<char*, 3ul> >(int, at::native::(anonymous namespace)::masked_fill_kernel(at::TensorIterator&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(float, bool)#1}, std::array<char*, 3ul>)",kernel,15.005,5.001666667,3
+accelerate/data_loader.py(99): __iter__,python_function,14.949,0.622875,24
+tqdm/std.py(113): __exit__,python_function,14.931,2.4885,6
+"void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctorOnOther_add<float>, std::array<char*, 2ul> >(int, at::native::CUDAFunctorOnOther_add<float>, std::array<char*, 2ul>)",kernel,14.86,4.953333333,3
+aten::unsqueeze,cpu_op,14.638,2.439666667,6
+_weakrefset.py(70): __iter__,python_function,14.631,4.877,3
+cudaPointerGetAttributes,cuda_runtime,14.568,1.618666667,9
+tqdm/std.py(102): acquire,python_function,14.364,2.394,6
+"void at_cuda_detail::cub::DeviceScanKernel<at_cuda_detail::cub::DeviceScanPolicy<long, at::cuda::cub::(anonymous namespace)::SumOp<long> >::Policy900, long const*, long*, at_cuda_detail::cub::ScanTileState<long, true>, at::cuda::cub::(anonymous namespace)::SumOp<long>, at_cuda_detail::cub::detail::InputValue<long, long*>, int, long>(long const*, long*, at_cuda_detail::cub::ScanTileState<long, true>, int, at::cuda::cub::(anonymous namespace)::SumOp<long>, at_cuda_detail::cub::detail::InputValue<long, long*>, int)",kernel,13.594,1.69925,8
+torch/profiler/profiler.py(460): schedule_fn,python_function,13.505,4.501666667,3
+<built-in method __contains__ of frozenset object at 0x7fb29e760120>,python_function,13.414,0.1863055556,72
+inspect.py(378): isfunction,python_function,13.411,0.1862638889,72
+<frozen os>(808): getenv,python_function,13.304,13.304,1
+_weakrefset.py(110): remove,python_function,12.996,4.332,3
+transformers/utils/generic.py(460): <genexpr>,python_function,12.961,0.8640666667,15
+<built-in function callable>,python_function,12.911,0.1195462963,108
+datasets/formatting/formatting.py(227): decode_batch,python_function,12.84,4.28,3
+torch/_ops.py(1002): <lambda>,python_function,12.432,2.072,6
+<built-in method items of dict object at 0x7fb1193da280>,python_function,12.36,0.07313609467,169
+transformers/utils/import_utils.py(1693): is_torch_fx_proxy,python_function,12.204,4.068,3
+<built-in method remove of set object at 0x7fb18bc6a340>,python_function,12.161,2.026833333,6
+void cutlass::Kernel2<cutlass_80_simt_sgemm_128x32_8x5_nn_align1>(cutlass_80_simt_sgemm_128x32_8x5_nn_align1::Params),kernel,11.781,3.927,3
+_weakrefset.py(27): __exit__,python_function,11.707,3.902333333,3
+<frozen _collections_abc>(804): get,python_function,11.661,11.661,1
+_weakrefset.py(85): add,python_function,11.571,3.857,3
+tqdm/std.py(106): release,python_function,11.543,1.923833333,6
+<built-in method values of mappingproxy object at 0x7fb10d34f910>,python_function,11.513,0.3198055556,36
+<built-in method searchsorted of numpy.ndarray object at 0x7fb10d33fb10>,python_function,11.429,3.809666667,3
+torch/jit/_trace.py(1321): is_tracing,python_function,11.389,1.898166667,6
+enum.py(1123): __new__,python_function,11.385,0.1518,75
+functools.py(396): __get__,python_function,11.019,3.673,3
+torch/nn/parameter.py(10): __instancecheck__,python_function,10.942,1.215777778,9
+transformers/tokenization_utils_base.py(3692): _pad,python_function,10.811,0.4504583333,24
+datasets/formatting/formatting.py(396): __init__,python_function,10.692,1.782,6
+<frozen abc>(121): __subclasscheck__,python_function,10.546,0.8788333333,12
+collections/__init__.py(1182): __copy__,python_function,10.523,3.507666667,3
+"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1} const&)::{lambda(int)#1})",kernel,10.424,1.489142857,7
+torch/utils/_config_module.py(573): __getattr__,python_function,10.201,10.201,1
+_weakrefset.py(63): __iter__,python_function,10.144,3.381333333,3
+torch/profiler/profiler.py(346): _get_distributed_info,python_function,10.048,10.048,1
+transformers/utils/generic.py(443): __setitem__,python_function,9.89,0.6593333333,15
+<frozen os>(709): __getitem__,python_function,9.716,9.716,1
+torch/utils/_pytree.py(466): _dict_flatten,python_function,9.483,1.5805,6
+"void at_cuda_detail::cub::DeviceCompactInitKernel<at_cuda_detail::cub::ScanTileState<unsigned long long, true>, long*>(at_cuda_detail::cub::ScanTileState<unsigned long long, true>, int, long*)",kernel,9.16,1.145,8
+"void at::native::(anonymous namespace)::krn_partials_per_segment<long>(long*, long const*, long const*, long)",kernel,8.842,1.10525,8
+"void at_cuda_detail::cub::DeviceRadixSortExclusiveSumKernel<at_cuda_detail::cub::DeviceRadixSortPolicy<long, at::cuda::cub::detail::OpaqueType<8>, unsigned long long>::Policy900, unsigned long long>(unsigned long long*)",kernel,8.58,1.0725,8
+accelerate/utils/operations.py(44): is_torch_tensor,python_function,8.361,2.787,3
+datasets/formatting/formatting.py(549): key_to_query_type,python_function,8.22,2.74,3
+"void at::native::(anonymous namespace)::compute_num_of_partial_segments<long>(long const*, long const*, long const*, long*)",kernel,8.18,1.0225,8
+detach_,cpu_op,8.126,0.4514444444,18
+torch/profiler/profiler.py(331): add_metadata_json,python_function,8.12,2.706666667,3
+transformers/tokenization_utils_base.py(282): __getattr__,python_function,7.813,2.604333333,3
+aten::set_,cpu_op,7.807,0.8674444444,9
+transformers/tokenization_utils.py(711): convert_tokens_to_ids,python_function,7.737,2.579,3
+transformers/utils/generic.py(175): is_torch_device,python_function,7.693,2.564333333,3
+<built-in method startswith of str object at 0x7fb10d2d60b0>,python_function,7.512,0.10016,75
+ampere_sgemm_32x32_sliced1x4_nt,kernel,7.46,2.486666667,3
+<built-in method _disable_profiler of PyCapsule object at 0x7fb18c151fb0>,python_function,7.398,7.398,1
+torch/utils/_config_module.py(274): __getattr__,python_function,7.381,7.381,1
+<built-in function id>,python_function,7.379,0.1756904762,42
+"void at::native::reduce_kernel<256, 2, at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4>)",kernel,7.315,2.438333333,3
+torch/_utils.py(771): <lambda>,python_function,7.251,7.251,1
+transformers/utils/generic.py(376): <genexpr>,python_function,7.132,0.2641481481,27
+<built-in function _abc_subclasscheck>,python_function,7.115,0.5929166667,12
+aten::lift_fresh,cpu_op,7.066,0.3925555556,18
+"void at::native::reduce_kernel<512, 1, at::native::ReduceOp<bool, at::native::func_wrapper_t<bool, at::native::and_kernel_cuda(at::TensorIterator&)::{lambda()#1}::operator()() const::{lambda()#12}::operator()() const::{lambda(bool, bool)#1}>, unsigned int, bool, 4> >(at::native::ReduceOp<bool, at::native::func_wrapper_t<bool, at::native::and_kernel_cuda(at::TensorIterator&)::{lambda()#1}::operator()() const::{lambda()#12}::operator()() const::{lambda(bool, bool)#1}>, unsigned int, bool, 4>)",kernel,7.055,2.351666667,3
+<built-in method _log_api_usage_once of PyCapsule object at 0x7fb21a1b41e0>,python_function,6.726,2.242,3
+datasets/table.py(389): num_rows,python_function,6.714,1.119,6
+<built-in method _kineto_step of PyCapsule object at 0x7fb18c153db0>,python_function,6.556,2.185333333,3
+"void (anonymous namespace)::elementwise_kernel_with_index<int, at::native::arange_cuda_out(c10::Scalar const&, c10::Scalar const&, c10::Scalar const&, at::Tensor&)::{lambda()#1}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1}>(int, at::native::arange_cuda_out(c10::Scalar const&, c10::Scalar const&, c10::Scalar const&, at::Tensor&)::{lambda()#1}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1}, function_traits<at::native::arange_cuda_out(c10::Scalar const&, c10::Scalar const&, c10::Scalar const&, at::Tensor&)::{lambda()#1}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1}>::result_type*)",kernel,6.538,0.81725,8
+<built-in method __array__ of numpy.ndarray object at 0x7fb18495a310>,python_function,6.492,0.7213333333,9
+cudaPeekAtLastError,cuda_runtime,6.414,0.06288235294,102
+"void at_cuda_detail::cub::DeviceScanInitKernel<at_cuda_detail::cub::ScanTileState<long, true> >(at_cuda_detail::cub::ScanTileState<long, true>, int)",kernel,6.393,0.799125,8
+dataclasses.py(1293): <genexpr>,python_function,6.307,0.1167962963,54
+<built-in method add of set object at 0x7fb18bc68ba0>,python_function,6.285,1.0475,6
+<frozen os>(791): encode,python_function,6.1,6.1,1
+tqdm/utils.py(125): __eq__,python_function,6.091,2.030333333,3
+datasets/formatting/formatting.py(436): __init__,python_function,5.972,1.990666667,3
+torch/cuda/__init__.py(289): _lazy_init,python_function,5.917,2.9585,2
+<built-in method values of collections.defaultdict object at 0x7fb18bf9d170>,python_function,5.882,0.1960666667,30
+<built-in method search of re.Pattern object at 0x7fb172412ae0>,python_function,5.875,0.3263888889,18
+datasets/features/features.py(2072): decode_batch,python_function,5.755,1.918333333,3
+torch/cuda/__init__.py(969): current_device,python_function,5.75,5.75,1
+pyarrow/types.py(323): is_primitive,python_function,5.704,0.6337777778,9
+tqdm/utils.py(152): wrapper_setattr,python_function,5.56,0.6177777778,9
+<built-in function getrecursionlimit>,python_function,5.534,0.1537222222,36
+transformers/utils/generic.py(206): is_tf_tensor,python_function,5.285,1.761666667,3
+_weakrefset.py(53): _commit_removals,python_function,5.243,1.747666667,3
+tqdm/utils.py(187): disable_on_exception,python_function,5.226,0.871,6
+inspect.py(2796): name,python_function,5.223,0.04836111111,108
+datasets/formatting/formatting.py(177): <genexpr>,python_function,5.112,0.213,24
+torch/nn/modules/container.py(354): __iter__,python_function,5.08,1.693333333,3
+datasets/formatting/formatting.py(176): <genexpr>,python_function,5.051,1.683666667,3
+logging/__init__.py(1776): getEffectiveLevel,python_function,5.006,1.668666667,3
+torch/nn/parameter.py(216): __instancecheck__,python_function,4.972,0.5524444444,9
+<built-in method endswith of str object at 0x7fb29e726ff0>,python_function,4.827,0.2298571429,21
+accelerate/data_loader.py(483): _update_state_dict,python_function,4.783,1.594333333,3
+torch/utils/_pytree.py(438): _tuple_flatten,python_function,4.694,0.3911666667,12
+transformers/utils/import_utils.py(316): is_torch_available,python_function,4.694,0.04889583333,96
+<built-in method keys of BaseModelOutputWithPastAndCrossAttentions object at 0x7fb10d34a240>,python_function,4.597,0.0901372549,51
+tqdm/utils.py(156): __init__,python_function,4.586,1.528666667,3
+transformers/configuration_utils.py(334): use_return_dict,python_function,4.531,1.510333333,3
+torch/cuda/__init__.py(242): is_initialized,python_function,4.384,2.192,2
+enum.py(1261): __hash__,python_function,4.331,0.7218333333,6
+"void gemmSN_NN_kernel<float, 256, 4, 2, 8, 4, 4, false, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float> >(cublasGemmSmallNParams<cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float const>, cublasGemvTensorStridedBatched<float>, float>)",kernel,4.262,1.420666667,3
+"void at::native::(anonymous namespace)::nll_loss_forward_reduce_cuda_kernel_2d<float, float, long>(float*, float*, float const*, long const*, float const*, bool, long, long, long, long)",kernel,4.205,1.401666667,3
+<built-in method extend of list object at 0x7fb10d2d4780>,python_function,4.184,0.05578666667,75
+datasets/formatting/formatting.py(106): _is_array_with_nulls,python_function,4.13,0.1720833333,24
+"void cublasLt::splitKreduce_kernel<32, 16, int, float, float, float, false, float, float, float, true, true, false>(cublasLt::cublasSplitKParams<float>, float const*, float const*, float*, float*, float const*, float const*, float const*, float const*, float*, void*, long, float*, int*, float*, float const*, float const*, float const*, float const*)",kernel,4.118,1.372666667,3
+tqdm/std.py(760): get_lock,python_function,4.087,1.362333333,3
+tqdm/_monitor.py(94): report,python_function,4.069,1.356333333,3
+<built-in function _cuda_maybeExchangeDevice>,python_function,4.066,4.066,1
+aten::resolve_conj,cpu_op,4.021,0.05584722222,72
+inspect.py(2808): kind,python_function,3.885,0.03597222222,108
+"void at::native::(anonymous namespace)::nll_loss_backward_reduce_cuda_kernel_2d<float, long>(float*, float const*, long const*, float const*, float const*, bool, int, int, long, long)",kernel,3.772,1.257333333,3
+<built-in function _cuda_getDevice>,python_function,3.745,3.745,1
+collections/__init__.py(1137): __setitem__,python_function,3.677,0.1361851852,27
+transformers/tokenization_utils_base.py(304): items,python_function,3.675,0.4083333333,9
+"void at::native::vectorized_elementwise_kernel<4, at::native::AUnaryFunctor<long, long, bool, at::native::(anonymous namespace)::CompareEqFunctor<long> >, std::array<char*, 2ul> >(int, at::native::AUnaryFunctor<long, long, bool, at::native::(anonymous namespace)::CompareEqFunctor<long> >, std::array<char*, 2ul>)",kernel,3.657,1.219,3
+<built-in method group of re.Match object at 0x7fb11821d2c0>,python_function,3.622,0.1341481481,27
+tqdm/std.py(1153): _comparable,python_function,3.549,0.5915,6
+transformers/tokenization_utils_base.py(3368): <genexpr>,python_function,3.423,0.1267777778,27
+transformers/tokenization_utils_base.py(1093): <genexpr>,python_function,3.366,0.2805,12
+torch/distributed/distributed_c10d.py(1273): is_initialized,python_function,3.321,3.321,1
+"void at::native::vectorized_elementwise_kernel<4, at::native::tanh_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::tanh_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>)",kernel,3.283,1.094333333,3
+<built-in method acquire of _multiprocessing.SemLock object at 0x7fb11a881df0>,python_function,3.259,0.5431666667,6
+<built-in method dim of Tensor object at 0x7fb118206080>,python_function,3.253,0.5421666667,6
+<built-in method _are_functorch_transforms_active of PyCapsule object at 0x7fb21a14d3b0>,python_function,3.247,1.082333333,3
+transformers/tokenization_utils.py(733): _convert_token_to_id_with_added_voc,python_function,3.221,1.073666667,3
+torch/__init__.py(1096): is_tensor,python_function,3.211,0.3567777778,9
+datasets/formatting/torch_formatter.py(38): _consolidate,python_function,3.199,0.3554444444,9
+transformers/utils/generic.py(169): _is_torch_device,python_function,3.076,1.025333333,3
+tqdm/std.py(1157): __hash__,python_function,3.024,0.504,6
+inspect.py(3089): parameters,python_function,2.992,0.04155555556,72
+<built-in method keys of dict object at 0x7fb1193d9780>,python_function,2.985,0.24875,12
+<built-in method end of re.Match object at 0x7fb11821d2c0>,python_function,2.973,0.06606666667,45
+"void (anonymous namespace)::softmax_warp_forward<float, float, float, 1, true, false>(float*, float const*, int, int, int, bool const*, int, bool)",kernel,2.938,0.9793333333,3
+transformers/utils/generic.py(372): <genexpr>,python_function,2.912,0.06471111111,45
+"void (anonymous namespace)::softmax_warp_backward<float, float, float, 1, true, false>(float*, float const*, float const*, int, int, int, bool const*)",kernel,2.879,0.9596666667,3
+<built-in method __new__ of type object at 0x938180>,python_function,2.836,0.4726666667,6
+aten::resolve_neg,cpu_op,2.801,0.03890277778,72
+"void at::native::vectorized_elementwise_kernel<4, at::native::tanh_backward_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float, float)#1}, std::array<char*, 3ul> >(int, at::native::tanh_backward_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#2}::operator()() const::{lambda(float, float)#1}, std::array<char*, 3ul>)",kernel,2.794,0.9313333333,3
+torch/compiler/__init__.py(367): is_compiling,python_function,2.741,0.4568333333,6
+transformers/modeling_utils.py(1075): get_head_mask,python_function,2.708,0.9026666667,3
+<built-in method split of str object at 0x7fb29e1dcdb0>,python_function,2.631,0.1461666667,18
+<built-in method _add_metadata_json of PyCapsule object at 0x7fb18c153d80>,python_function,2.616,0.872,3
+Memcpy DtoH (Device -> Pinned),gpu_memcpy,2.533,0.8443333333,3
+<built-in method _is_tracing of PyCapsule object at 0x7fb22b3d7cc0>,python_function,2.528,0.4213333333,6
+<built-in function min>,python_function,2.518,0.4196666667,6
+_weakrefset.py(21): __enter__,python_function,2.465,0.8216666667,3
+transformers/utils/import_utils.py(1675): <genexpr>,python_function,2.446,0.4076666667,6
+datasets/formatting/formatting.py(646): <genexpr>,python_function,2.344,0.3906666667,6
+datasets/utils/py_utils.py(493): <genexpr>,python_function,2.158,0.1798333333,12
+aten::_unsafe_view,cpu_op,2.152,0.7173333333,3
+<built-in method acquire of _thread.RLock object at 0x7fb18bb79d40>,python_function,2.149,0.3581666667,6
+torch/utils/data/sampler.py(198): __iter__,python_function,2.13,0.08875,24
+numpy/lib/_version.py(78): _compare_version,python_function,2.102,0.2335555556,9
+transformers/tokenization_utils_base.py(1092): <genexpr>,python_function,2.019,0.2243333333,9
+torch/_jit_internal.py(103): is_scripting,python_function,1.963,0.09815,20
+<built-in function perf_counter_ns>,python_function,1.944,0.972,2
+torch/cuda/__init__.py(441): __enter__,python_function,1.9,1.9,1
+torch/autograd/__init__.py(232): _tensor_or_tensors_to_tuple,python_function,1.895,0.6316666667,3
+<built-in function iter>,python_function,1.843,0.2047777778,9
+torch/distributed/__init__.py(14): is_available,python_function,1.818,1.818,1
+<built-in method __exit__ of torch._C.DisableTorchFunctionSubclass object at 0x7fb11a89b2d0>,python_function,1.774,0.2956666667,6
+pyarrow/types.py(186): is_temporal,python_function,1.726,0.5753333333,3
+tqdm/std.py(1170): __iter__,python_function,1.681,0.1867777778,9
+<built-in method release of _thread.RLock object at 0x7fb18bb79d40>,python_function,1.63,0.2716666667,6
+<built-in method update of dict object at 0x7fb10d2d4d00>,python_function,1.554,0.518,3
+<built-in method difference of set object at 0x7fb10d31bd80>,python_function,1.536,0.512,3
+<built-in method numel of Tensor object at 0x7fb118202f80>,python_function,1.518,0.506,3
+datasets/formatting/__init__.py(114): get_format_type_from_alias,python_function,1.49,0.4966666667,3
+<built-in function proxy>,python_function,1.46,0.2433333333,6
+torch/distributed/distributed_c10d.py(725): WORLD,python_function,1.441,1.441,1
+torch/cuda/__init__.py(107): _is_compiled,python_function,1.277,1.277,1
+<built-in method release of _multiprocessing.SemLock object at 0x7fb11a881df0>,python_function,1.265,0.2108333333,6
+transformers/tokenization_utils_base.py(3363): <genexpr>,python_function,1.235,0.4116666667,3
+<built-in method pop of list object at 0x7fb18bb44980>,python_function,1.233,0.411,3
+<built-in method copy of dict object at 0x7fb1193da080>,python_function,1.173,0.391,3
+<built-in method items of BaseModelOutputWithPastAndCrossAttentions object at 0x7fb10d34a240>,python_function,1.142,0.1268888889,9
+pyarrow/types.py(61): is_boolean,python_function,1.083,0.361,3
+transformers/utils/import_utils.py(602): is_tf_available,python_function,1.078,0.3593333333,3
+torch/nn/_reduction.py(8): get_enum,python_function,1.076,0.3586666667,3
+<built-in function _cuda_exchangeDevice>,python_function,1.066,1.066,1
+_weakrefset.py(17): __init__,python_function,1.026,0.342,3
+inspect.py(2800): default,python_function,1.025,0.02847222222,36
+<built-in method pop of dict object at 0x7fb1193d8800>,python_function,0.968,0.1613333333,6
+<built-in method __instancecheck__ of _ParameterMeta object at 0x2d4d28f0>,python_function,0.947,0.05261111111,18
+transformers/tokenization_utils_base.py(3364): <genexpr>,python_function,0.947,0.1052222222,9
+<built-in method discard of set object at 0x7fb10d31a880>,python_function,0.897,0.299,3
+tqdm/std.py(1160): __iter__,python_function,0.877,0.2923333333,3
+collections/__init__.py(1148): __contains__,python_function,0.771,0.1285,6
+<built-in function _has_torch_function>,python_function,0.758,0.2526666667,3
+<built-in function hash>,python_function,0.668,0.1113333333,6
+<built-in function abs>,python_function,0.663,0.1105,6
+<built-in function _cuda_isInBadFork>,python_function,0.653,0.3265,2
+<built-in method encode of str object at 0x7fb1dcf29070>,python_function,0.615,0.615,1
+numpy/_core/fromnumeric.py(1460): _searchsorted_dispatcher,python_function,0.535,0.1783333333,3
+threading.py(601): is_set,python_function,0.527,0.1756666667,3
+datasets/utils/tqdm.py(94): are_progress_bars_disabled,python_function,0.515,0.1716666667,3
+<built-in function _cuda_getDeviceCount>,python_function,0.489,0.489,1
+torch/utils/_pytree.py(923): tree_iter,python_function,0.471,0.0785,6
+<built-in method values of collections.OrderedDict object at 0x7fb18c2bb140>,python_function,0.424,0.1413333333,3
+<built-in method kineto_available of PyCapsule object at 0x7fb18c153de0>,python_function,0.42,0.42,1
+datasets/formatting/formatting.py(218): __init__,python_function,0.417,0.0695,6
+<built-in method lower of str object at 0x7fb29e963a50>,python_function,0.41,0.41,1
+torch/jit/__init__.py(128): annotate,python_function,0.347,0.05783333333,6
+datasets/formatting/formatting.py(232): __init__,python_function,0.267,0.0445,6
+transformers/utils/import_utils.py(590): is_torch_fx_available,python_function,0.244,0.08133333333,3
+datasets/formatting/formatting.py(155): __init__,python_function,0.147,0.049,3
+torch/distributed/distributed_c10d.py(600): default_pg,python_function,0.128,0.128,1
+typing.py(2187): cast,python_function,0.123,0.041,3
