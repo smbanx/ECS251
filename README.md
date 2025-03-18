@@ -29,5 +29,9 @@ py-spy record --output py_spy_profile.svg -- python \<INSERT FILE HERE\>
 
 strace -c -o strace_summary.txt python \<INSERT FILE HERE\>
 
+#### Strace profiling on individual ML parts
+strace -o strace_output.txt -f python workload/trace_syscalls.py \<--trace_copy/--trace_forward/--trace_backward\> --mode \<0 / 1\>
+
+
 ### Pytorch profiling commands
 python \<INSERT FILE HERE\> --profile
