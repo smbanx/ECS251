@@ -37,7 +37,7 @@ strace -c -o strace_summary.txt python <INSERT FILE HERE>
 
 #### Strace profiling on individual ML parts
 ```
-strace -o strace_output.txt -f python workload/trace_syscalls.py <--trace_copy OR--trace_forward OR --trace_backward> --mode <0 OR 1>
+strace -o strace_output.txt -f python workload/trace_syscalls.py <--trace_copy OR --trace_forward OR --trace_backward> --mode <0 OR 1>
 ```
 
 
