@@ -41,7 +41,18 @@ strace -o strace_output.txt -f python workload/trace_syscalls.py <--trace_copy O
 ```
 
 
+
+
 ### Pytorch profiling commands
 ```
 python \<INSERT FILE HERE\> --profile
 ```
+
+# What the tools do
+
+[Strace Visualization](https://github.com/smbanx/ECS251/blob/main/tools/Strace_Visualization.ipynb) run this file with strace results to generate pie graph and syscall by time visualizations
+
+[Strace Parer](strace_parser) Parse Strace results into .json file with PID, Syscall, Arguments, and Return Value for further processing.
+
+
+
