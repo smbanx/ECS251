@@ -24,20 +24,20 @@ Part 2 involves in trying out ways to reduce I/O overhead within our workload. W
 
 ### Strace profiling commands
 ```
-strace -o strace_output.txt -f python \<INSERT FILE HERE\>
+strace -o strace_output.txt -f python <INSERT FILE HERE>
 ```
 
 ```
-py-spy record --output py_spy_profile.svg -- python \<INSERT FILE HERE\>
+py-spy record --output py_spy_profile.svg -- python <INSERT FILE HERE>
 ```
 
 ```
-strace -c -o strace_summary.txt python \<INSERT FILE HERE\>
+strace -c -o strace_summary.txt python <INSERT FILE HERE>
 ```
 
 #### Strace profiling on individual ML parts
 ```
-strace -o strace_output.txt -f python workload/trace_syscalls.py \<--trace_copy/--trace_forward/--trace_backward\> --mode \<0 / 1\>
+strace -o strace_output.txt -f python workload/trace_syscalls.py <--trace_copy OR--trace_forward OR --trace_backward> --mode <0 OR 1>
 ```
 
 
