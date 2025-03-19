@@ -23,13 +23,20 @@ Part 2 involves in trying out ways to reduce I/O overhead within our workload. W
 # Profiling commands
 
 ### Strace profiling commands
+
+To run strace profiler on any workload and put the results into the output file "strace_output.txt"
+
 ```
 strace -o strace_output.txt -f python <INSERT FILE HERE>
 ```
 
+To generate a flame graph of execution
+
 ```
 py-spy record --output py_spy_profile.svg -- python <INSERT FILE HERE>
 ```
+
+To generate a strace summary
 
 ```
 strace -c -o strace_summary.txt python <INSERT FILE HERE>
